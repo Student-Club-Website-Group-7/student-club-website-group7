@@ -1,11 +1,310 @@
 <!doctype html>
-<html>
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
   <link href="/src/style.css" rel="stylesheet">
+  <title>Student Club Website</title>
 </head>
-<body>
-  
+
+<body class="bg-slate-50">
+
+  <!-- ================= HEADER ================= -->
+
+  <header class="sticky top-0 z-50 w-full
+           bg-white/95 backdrop-blur-xl
+           border-b border-slate-200
+           shadow-sm">
+
+    <!-- ================= HEADER CONTAINER ================= -->
+
+    <div class="max-w-7xl mx-auto
+             h-[88px]
+             px-5 sm:px-6 lg:px-8
+             flex items-center justify-between">
+
+      <!-- ================= LOGO ================= -->
+
+      <a href="./index.html" class="shrink-0 group">
+
+        <img src="./image/photo_2026-09-22_20-17-37.jpg" alt="Student Club Website" class="w-[165px] sm:w-[185px] lg:w-[205px]
+                 h-auto
+                 object-contain
+                 transition-all duration-300
+                 group-hover:scale-[1.03]">
+      </a>
+
+
+      <!-- ================= DESKTOP NAVIGATION ================= -->
+
+      <nav class="hidden md:flex
+               items-center
+               gap-1
+               p-1.5
+               bg-slate-50
+               border border-slate-200
+               rounded-2xl">
+
+        <!-- HOME -->
+
+        <a href="./index.html" class="nav-link active">
+          Home
+        </a>
+
+
+        <!-- CLUBS -->
+
+        <a href="./page/club.html" class="nav-link">
+          Clubs
+        </a>
+
+
+        <!-- STORIES -->
+
+        <a href="./page/stories.html" class="nav-link">
+          Stories
+        </a>
+
+
+        <!-- JOIN A CLUB -->
+
+        <a href="./page/join.html" class="nav-link">
+          Join a Club
+        </a>
+
+
+        <!-- CONTACT -->
+
+        <a href="./page/contact.html" class="nav-link">
+          Contact
+        </a>
+
+      </nav>
+
+      <!-- ================= MOBILE MENU BUTTON ================= -->
+
+      <button id="menu-button" type="button" aria-label="Open menu" aria-expanded="false" class="md:hidden
+               w-11 h-11
+               flex items-center justify-center
+               rounded-xl
+               bg-[#050D60]
+               text-white
+               shadow-md
+               hover:bg-[#00B0DF]
+               transition-all duration-300">
+
+        <i id="menu-icon" class="fa-solid fa-bars text-lg"></i>
+
+      </button>
+
+    </div>
+
+    <!-- ================= MOBILE NAVIGATION ================= -->
+
+    <div id="mobile-menu" class="hidden md:hidden
+             border-t border-slate-200
+             bg-white">
+
+      <nav class="max-w-7xl mx-auto
+               px-5 sm:px-6
+               py-4">
+
+        <!-- HOME -->
+
+        <a href="./index.html" class="mobile-nav-link active-mobile">
+          Home
+        </a>
+
+        <!-- CLUBS -->
+
+        <a href="./page/club.html" class="mobile-nav-link">
+          Clubs
+        </a>
+
+        <!-- STORIES -->
+
+        <a href="./page/stories.html" class="mobile-nav-link">
+          Stories
+        </a>
+
+        <!-- JOIN A CLUB -->
+
+        <a href="./page/join.html" class="mobile-nav-link">
+          Join a Club
+        </a>
+
+        <!-- CONTACT -->
+
+        <a href="./page/contact.html" class="mobile-nav-link">
+          Contact
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <style>
+    /* ================= DESKTOP NAVIGATION ================= */
+
+    .nav-link {
+      position: relative;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 12px 20px;
+
+      border-radius: 12px;
+
+      color: #050D60;
+
+      font-size: 15px;
+      font-weight: 500;
+
+      white-space: nowrap;
+
+      transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+    }
+
+
+    .nav-link:hover {
+      background-color: white;
+      color: #00B0DF;
+
+      transform: translateY(-1px);
+    }
+
+
+    /* ACTIVE NAVIGATION */
+
+    .nav-link.active {
+      background-color: #050D60;
+      color: white;
+
+      font-weight: 600;
+
+      box-shadow:
+        0 5px 14px rgba(5, 13, 96, 0.18);
+    }
+
+
+    .nav-link.active:hover {
+      background-color: #00B0DF;
+      color: white;
+    }
+
+    /* ================= MOBILE NAVIGATION ================= */
+
+    .mobile-nav-link {
+      display: block;
+
+      width: 100%;
+
+      padding: 14px 16px;
+
+      margin-bottom: 5px;
+
+      border-radius: 12px;
+
+      color: #050D60;
+
+      font-size: 16px;
+      font-weight: 500;
+
+      transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        padding-left 0.3s ease;
+    }
+
+
+    .mobile-nav-link:hover {
+      background-color: #f1f5f9;
+
+      color: #00B0DF;
+
+      padding-left: 21px;
+    }
+
+
+    /* ACTIVE MOBILE PAGE */
+
+    .active-mobile {
+      background-color: #050D60;
+
+      color: white;
+
+      font-weight: 600;
+    }
+
+
+    .active-mobile:hover {
+      background-color: #00B0DF;
+
+      color: white;
+
+      padding-left: 16px;
+    }
+  </style>
+
+  <!-- ================= MOBILE MENU SCRIPT ================= -->
+
+  <script>
+
+    const menuButton = document.getElementById("menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuIcon = document.getElementById("menu-icon");
+
+    menuButton.addEventListener("click", () => {
+
+      mobileMenu.classList.toggle("hidden");
+
+      if (mobileMenu.classList.contains("hidden")) {
+
+        menuIcon.classList.remove("fa-xmark");
+        menuIcon.classList.add("fa-bars");
+
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "Open menu");
+
+      } else {
+
+        menuIcon.classList.remove("fa-bars");
+        menuIcon.classList.add("fa-xmark");
+
+        menuButton.setAttribute("aria-expanded", "true");
+        menuButton.setAttribute("aria-label", "Close menu");
+
+      }
+
+    });
+
+    /* Close menu after selecting a page */
+
+    const mobileLinks = document.querySelectorAll(".mobile-nav-link");
+
+    mobileLinks.forEach((link) => {
+
+      link.addEventListener("click", () => {
+
+        mobileMenu.classList.add("hidden");
+
+        menuIcon.classList.remove("fa-xmark");
+        menuIcon.classList.add("fa-bars");
+
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "Open menu");
+
+      });
+
+    });
+
+  </script>
+
 </body>
 </html>
