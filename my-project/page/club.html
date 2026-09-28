@@ -127,6 +127,1226 @@
 
     </header>
 
+    <!-- ================= CLUBS PAGE ================= -->
+    <main class="bg-white">
+
+        <!-- PAGE INTRO -->
+        <section class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pt-12 pb-6">
+
+            <div>
+                <h1 class="text-3xl sm:text-4xl font-extrabold text-[#050D60]">
+                    Explore Student Clubs
+                </h1>
+
+                <p class="mt-3 text-sm sm:text-base text-slate-500">
+                    Browse all 16 official clubs operating at Passerelles Numériques Cambodia campus.
+                </p>
+            </div>
+
+            <!-- SEARCH + FILTER -->
+            <div class="mt-7 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5">
+
+                <!-- SEARCH -->
+                <div class="relative w-full lg:w-[330px]">
+                    <i class="fa-solid fa-magnifying-glass
+                          absolute left-4 top-1/2 -translate-y-1/2
+                          text-slate-400 text-sm"></i>
+
+                    <input id="club-search" type="text" placeholder="Search clubs..." class="w-full h-12 pl-11 pr-4
+                           rounded-xl
+                           border border-slate-200
+                           bg-white
+                           text-sm text-slate-700
+                           outline-none
+                           focus:border-[#00B0DF]
+                           focus:ring-2 focus:ring-[#00B0DF]/10
+                           transition">
+                </div>
+
+                <!-- CATEGORY FILTERS -->
+                <div class="flex flex-wrap gap-2">
+
+                    <button class="category-btn active-category" data-category="All">
+                        All Clubs
+                    </button>
+
+                    <button class="category-btn" data-category="Technology">
+                        Technology
+                    </button>
+
+                    <button class="category-btn" data-category="Arts & Media">
+                        Arts & Music
+                    </button>
+
+                    <button class="category-btn" data-category="Leadership">
+                        Leadership
+                    </button>
+
+                    <button class="category-btn" data-category="Sports">
+                        Sports & Health
+                    </button>
+
+                    <button class="category-btn" data-category="Academic">
+                        Academic
+                    </button>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- CLUBS GRID -->
+        <section class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pb-20">
+
+            <div id="clubs-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+                <!-- ================= 01 ROBOTIC CLUB ================= -->
+                <article
+                    class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                    data-category="Technology" data-name="Robotic Club">
+
+                    <!-- CATEGORY -->
+                    <div class="px-5 pt-5">
+                        <span
+                            class="inline-flex items-center rounded-full bg-[#00B4DB]/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#00B4DB]">
+                            TECHNOLOGY
+                        </span>
+                    </div>
+
+                    <!-- CLUB IMAGE -->
+                    <div class="mt-4 overflow-hidden">
+                        <img src="../public/image/robotic.jpg" alt="Robotic Club members"
+                            class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+
+                    <!-- CARD CONTENT -->
+                    <div class="p-6">
+
+                        <!-- TITLE -->
+                        <h2 class="text-2xl font-bold text-slate-900">
+                            Robotic Club
+                        </h2>
+
+                        <!-- DESCRIPTION -->
+                        <p class="mt-3 text-sm leading-6 text-slate-600">
+                            Explore robotics, mechanics, automation, and basic AI
+                            programming through hands-on projects.
+                        </p>
+
+                        <!-- INFORMATION -->
+                        <div class="mt-5 space-y-3 text-sm text-slate-600">
+
+                            <span class="flex items-center gap-3">
+                                <i class="fa-solid fa-users w-4 text-[#00B4DB]"></i>
+                                <span>12 Members</span>
+                            </span>
+
+                            <span class="flex items-center gap-3">
+                                <i class="fa-solid fa-calendar w-4 text-[#00B4DB]"></i>
+                                <span>Generation 2026–2027</span>
+                            </span>
+
+                        </div>
+
+                        <!-- BUTTONS -->
+                        <div class="mt-6 flex gap-3">
+
+                            <!-- DETAILS BUTTON -->
+                            <button type="button" onclick="openClubModal('Robotic Club')"
+                                class="flex-1 rounded-lg border border-slate-300 px-4 py-2.5 text-center text-sm font-semibold text-slate-700 transition hover:border-[#00B4DB] hover:bg-[#00B4DB]/10 hover:text-[#00B4DB]">
+                                Details
+                            </button>
+
+                            <!-- JOIN BUTTON -->
+                            <a href="./join.html"
+                                class="flex-1 rounded-lg bg-[#00B4DB] px-4 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-[#0099BD]">
+                                Join Club
+                            </a>
+
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ================= CLUB DETAILS MODAL ================= -->
+                <div id="clubModal"
+                    class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/50 px-4 backdrop-blur-sm"
+                    onclick="handleModalClick(event)">
+                    <div class="relative max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl bg-white p-6 shadow-2xl"
+                        onclick="event.stopPropagation()">
+
+                        <!-- CLOSE BUTTON -->
+                        <button type="button" onclick="closeClubModal()"
+                            class="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-slate-100 text-slate-600 transition hover:bg-red-100 hover:text-red-600"
+                            aria-label="Close modal">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+
+
+                        <!-- MODAL HEADER -->
+                        <div class="mb-6 pr-10">
+
+                            <div
+                                class="mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-[#00B4DB]/10 text-[#00B4DB]">
+                                <i id="modalIcon" class="fa-solid fa-robot text-xl"></i>
+                            </div>
+
+                            <h2 id="modalClubName" class="text-2xl font-bold text-slate-900">
+                                Robotic Club
+                            </h2>
+
+                            <p class="mt-1 text-sm text-slate-500">
+                                Club Information · Generation 2026–2027
+                            </p>
+
+                        </div>
+
+
+                        <!-- CLUB INFORMATION -->
+                        <div class="space-y-3">
+
+                            <!-- CLUB -->
+                            <div class="flex items-center justify-between rounded-lg bg-slate-50 px-4 py-3">
+                                <span class="font-medium text-slate-600">
+                                    Club
+                                </span>
+
+                                <span id="modalClubNameInfo" class="text-right font-semibold text-slate-900">
+                                    Robotic Club
+                                </span>
+                            </div>
+
+
+                            <!-- CATEGORY -->
+                            <div class="flex items-center justify-between rounded-lg bg-slate-50 px-4 py-3">
+                                <span class="font-medium text-slate-600">
+                                    Category
+                                </span>
+
+                                <span id="modalCategory" class="font-semibold text-slate-900">
+                                    Technology
+                                </span>
+                            </div>
+
+
+                            <!-- GENERATION -->
+                            <div class="flex items-center justify-between rounded-lg bg-slate-50 px-4 py-3">
+                                <span class="font-medium text-slate-600">
+                                    Generation
+                                </span>
+
+                                <span class="font-semibold text-slate-900">
+                                    2026–2027
+                                </span>
+                            </div>
+
+
+                            <!-- MEMBERS -->
+                            <div class="flex items-center justify-between rounded-lg bg-slate-50 px-4 py-3">
+                                <span class="font-medium text-slate-600">
+                                    Members
+                                </span>
+
+                                <span id="modalMembers" class="font-semibold text-slate-900">
+                                    12 members
+                                </span>
+                            </div>
+
+
+                            <!-- TOTAL -->
+                            <div
+                                class="flex items-center justify-between rounded-lg border border-[#00B4DB]/20 bg-[#00B4DB]/10 px-4 py-3">
+                                <span class="font-semibold text-[#00B4DB]">
+                                    Total
+                                </span>
+
+                                <span id="modalTotal" class="font-bold text-[#00B4DB]">
+                                    12 members
+                                </span>
+                            </div>
+
+                        </div>
+
+
+                        <!-- MAIN ACTIVITIES -->
+                        <div class="mt-6">
+
+                            <h3 class="mb-3 flex items-center gap-2 text-lg font-bold text-slate-900">
+                                <i class="fa-solid fa-gears text-[#00B4DB]"></i>
+
+                                Main Activities
+                            </h3>
+
+
+                            <ul id="modalActivities" class="space-y-2 text-sm leading-6 text-slate-600">
+
+                                <!-- JavaScript will add activities here -->
+
+                            </ul>
+
+                        </div>
+
+
+                        <!-- CLOSE BUTTON -->
+                        <div class="mt-6">
+
+                            <button type="button" onclick="closeClubModal()"
+                                class="w-full rounded-lg bg-[#00B4DB] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#0099BD]">
+                                Close
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ================= 02 LIBRARY CLUB ================= -->
+                <article
+                    class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                    data-category="Academic" data-name="Library Club">
+
+                    <!-- CATEGORY -->
+                    <div class="px-5 pt-5">
+                        <span
+                            class="inline-flex items-center rounded-full bg-[#00B4DB]/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#00B4DB]">
+                            ACADEMIC
+                        </span>
+                    </div>
+
+                    <!-- CLUB IMAGE -->
+                    <div class="mt-4 overflow-hidden">
+                        <img src="../public/image/library.jpg" alt="Library Club members"
+                            class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+
+                    <!-- CARD CONTENT -->
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold text-slate-900">
+                            Library Club
+                        </h2>
+
+                        <p class="mt-3 text-sm leading-6 text-slate-600">
+                            Promote reading culture, book discussions, archive management,
+                            and literature events.
+                        </p>
+
+                        <!-- INFORMATION -->
+                        <div class="mt-5 space-y-3 text-sm text-slate-600">
+                            <span class="flex items-center gap-3">
+                                <i class="fa-solid fa-users w-4 text-[#00B4DB]"></i>
+                                <span>11 Members</span>
+                            </span>
+
+                            <span class="flex items-center gap-3">
+                                <i class="fa-solid fa-calendar w-4 text-[#00B4DB]"></i>
+                                <span>Generation 2026-2027</span>
+                            </span>
+                        </div>
+
+                        <!-- BUTTONS -->
+                        <div class="mt-6 flex gap-3">
+                            <button type="button" onclick="openClubModal('Library Club')"
+                                class="flex-1 rounded-lg border border-slate-300 px-4 py-2.5 text-center text-sm font-semibold text-slate-700 transition hover:border-[#00B4DB] hover:bg-[#00B4DB]/10 hover:text-[#00B4DB]">
+                                Details
+                            </button>
+
+                            <a href="./join.html"
+                                class="flex-1 rounded-lg bg-[#00B4DB] px-4 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-[#0099BD]">
+                                Join Club
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- ================= 03 MUSIC CLUB ================= -->
+                <article
+                    class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                    data-category="Arts & Media" data-name="Music Club">
+
+                    <div class="px-5 pt-5">
+                        <span
+                            class="inline-flex items-center rounded-full bg-[#00B4DB]/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#00B4DB]">
+                            ARTS & MEDIA
+                        </span>
+                    </div>
+
+                    <div class="mt-4 overflow-hidden">
+                        <img src="../public/image/music.jpg" alt="Music Club members"
+                            class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold text-slate-900">
+                            Music Club
+                        </h2>
+
+                        <p class="mt-3 text-sm leading-6 text-slate-600">
+                            Practice vocals, acoustic instruments, and music production
+                            for campus events.
+                        </p>
+
+                        <div class="mt-5 space-y-3 text-sm text-slate-600">
+                            <span class="flex items-center gap-3">
+                                <i class="fa-solid fa-users w-4 text-[#00B4DB]"></i>
+                                <span>11 Members</span>
+                            </span>
+
+                            <span class="flex items-center gap-3">
+                                <i class="fa-solid fa-calendar w-4 text-[#00B4DB]"></i>
+                                <span>Generation 2026-2027</span>
+                            </span>
+                        </div>
+
+                        <div class="mt-6 flex gap-3">
+                            <button type="button" onclick="openClubModal('Music Club')"
+                                class="flex-1 rounded-lg border border-slate-300 px-4 py-2.5 text-center text-sm font-semibold text-slate-700 transition hover:border-[#00B4DB] hover:bg-[#00B4DB]/10 hover:text-[#00B4DB]">
+                                Details
+                            </button>
+
+                            <a href="./join.html"
+                                class="flex-1 rounded-lg bg-[#00B4DB] px-4 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-[#0099BD]">
+                                Join Club
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- ================= 04 WEB CLUB ================= -->
+                <article
+                    class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                    data-category="Technology" data-name="Web Club">
+
+                    <div class="px-5 pt-5">
+                        <span
+                            class="inline-flex items-center rounded-full bg-[#00B4DB]/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#00B4DB]">
+                            TECHNOLOGY
+                        </span>
+                    </div>
+
+                    <div class="mt-4 overflow-hidden">
+                        <img src="../public/image/web.jpg" alt="Web Club members"
+                            class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold text-slate-900">
+                            Web Club
+                        </h2>
+
+                        <p class="mt-3 text-sm leading-6 text-slate-600">
+                            Build websites, web apps, UI/UX designs, and learn
+                            frontend and backend technologies.
+                        </p>
+
+                        <div class="mt-5 space-y-3 text-sm text-slate-600">
+                            <span class="flex items-center gap-3">
+                                <i class="fa-solid fa-users w-4 text-[#00B4DB]"></i>
+                                <span>13 Members</span>
+                            </span>
+
+                            <span class="flex items-center gap-3">
+                                <i class="fa-solid fa-calendar w-4 text-[#00B4DB]"></i>
+                                <span>Generation 2026-2027</span>
+                            </span>
+                        </div>
+
+                        <div class="mt-6 flex gap-3">
+                            <button type="button" onclick="openClubModal('Web Club')"
+                                class="flex-1 rounded-lg border border-slate-300 px-4 py-2.5 text-center text-sm font-semibold text-slate-700 transition hover:border-[#00B4DB] hover:bg-[#00B4DB]/10 hover:text-[#00B4DB]">
+                                Details
+                            </button>
+
+                            <a href="./join.html"
+                                class="flex-1 rounded-lg bg-[#00B4DB] px-4 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-[#0099BD]">
+                                Join Club
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- ================= 05 PUBLIC SPEAKING CLUB ================= -->
+                <article
+                    class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                    data-category="Leadership" data-name="Public Speaking Club">
+
+                    <div class="px-5 pt-5">
+                        <span
+                            class="inline-flex items-center rounded-full bg-[#00B4DB]/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#00B4DB]">
+                            LEADERSHIP
+                        </span>
+                    </div>
+
+                    <div class="mt-4 overflow-hidden">
+                        <img src="../public/image/speaking.jpg" alt="Public Speaking Club members"
+                            class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold text-slate-900">
+                            Public Speaking Club
+                        </h2>
+
+                        <p class="mt-3 text-sm leading-6 text-slate-600">
+                            Master speech delivery, debate skills, stage presence,
+                            and overcome stage fright.
+                        </p>
+
+                        <div class="mt-5 space-y-3 text-sm text-slate-600">
+                            <span class="flex items-center gap-3">
+                                <i class="fa-solid fa-users w-4 text-[#00B4DB]"></i>
+                                <span>12 Members</span>
+                            </span>
+
+                            <span class="flex items-center gap-3">
+                                <i class="fa-solid fa-calendar w-4 text-[#00B4DB]"></i>
+                                <span>Generation 2026-2027</span>
+                            </span>
+                        </div>
+
+                        <div class="mt-6 flex gap-3">
+                            <button type="button" onclick="openClubModal('Public Speaking Club')"
+                                class="flex-1 rounded-lg border border-slate-300 px-4 py-2.5 text-center text-sm font-semibold text-slate-700 transition hover:border-[#00B4DB] hover:bg-[#00B4DB]/10 hover:text-[#00B4DB]">
+                                Details
+                            </button>
+
+                            <a href="./join.html"
+                                class="flex-1 rounded-lg bg-[#00B4DB] px-4 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-[#0099BD]">
+                                Join Club
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- ================= 06 AEROBIC CLUB ================= -->
+                <article
+                    class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                    data-category="Sports" data-name="Aerobic Club">
+
+                    <div class="px-5 pt-5">
+                        <span
+                            class="inline-flex items-center rounded-full bg-[#00B4DB]/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#00B4DB]">
+                            SPORTS
+                        </span>
+                    </div>
+
+                    <div class="mt-4 overflow-hidden">
+                        <img src="../public/image/Dance.jpg" alt="Aerobic Club members"
+                            class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold text-slate-900">
+                            Aerobic Club
+                        </h2>
+
+                        <p class="mt-3 text-sm leading-6 text-slate-600">
+                            Join fitness classes, build cardio endurance, and stay
+                            active with our aerobic exercise community.
+                        </p>
+
+                        <div class="mt-5 space-y-3 text-sm text-slate-600">
+                            <span class="flex items-center gap-3">
+                                <i class="fa-solid fa-users w-4 text-[#00B4DB]"></i>
+                                <span>10 Members</span>
+                            </span>
+
+                            <span class="flex items-center gap-3">
+                                <i class="fa-solid fa-calendar w-4 text-[#00B4DB]"></i>
+                                <span>Generation 2026-2027</span>
+                            </span>
+                        </div>
+
+                        <div class="mt-6 flex gap-3">
+                            <button type="button" onclick="openClubModal('Aerobic Club')"
+                                class="flex-1 rounded-lg border border-slate-300 px-4 py-2.5 text-center text-sm font-semibold text-slate-700 transition hover:border-[#00B4DB] hover:bg-[#00B4DB]/10 hover:text-[#00B4DB]">
+                                Details
+                            </button>
+
+                            <a href="./join.html"
+                                class="flex-1 rounded-lg bg-[#00B4DB] px-4 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-[#0099BD]">
+                                Join Club
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- ================= 07 FILMS AND MEDIA CLUB ================= -->
+                <article
+                    class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                    data-category="Arts & Media" data-name="Films and Media Club">
+
+                    <div class="px-5 pt-5">
+                        <span
+                            class="inline-flex items-center rounded-full bg-[#00B4DB]/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#00B4DB]">
+                            ARTS & MEDIA
+                        </span>
+                    </div>
+
+                    <div class="mt-4 overflow-hidden">
+                        <img src="../public/image/Film.jpg" alt="Films and Media Club members"
+                            class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold text-slate-900">
+                            Films and Media Club
+                        </h2>
+
+                        <p class="mt-3 text-sm leading-6 text-slate-600">
+                            Short film production, video editing, storyboarding,
+                            and campus media coverage.
+                        </p>
+
+                        <div class="mt-5 space-y-3 text-sm text-slate-600">
+                            <span class="flex items-center gap-3">
+                                <i class="fa-solid fa-users w-4 text-[#00B4DB]"></i>
+                                <span>12 Members</span>
+                            </span>
+
+                            <span class="flex items-center gap-3">
+                                <i class="fa-solid fa-calendar w-4 text-[#00B4DB]"></i>
+                                <span>Generation 2026-2027</span>
+                            </span>
+                        </div>
+
+                        <div class="mt-6 flex gap-3">
+                            <button type="button" onclick="openClubModal('Films and Media Club')"
+                                class="flex-1 rounded-lg border border-slate-300 px-4 py-2.5 text-center text-sm font-semibold text-slate-700 transition hover:border-[#00B4DB] hover:bg-[#00B4DB]/10 hover:text-[#00B4DB]">
+                                Details
+                            </button>
+
+                            <a href="./join.html"
+                                class="flex-1 rounded-lg bg-[#00B4DB] px-4 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-[#0099BD]">
+                                Join Club
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- ================= 08 GENDER AWARENESS CLUB ================= -->
+                <article
+                    class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                    data-category="Leadership" data-name="Gender Awareness Club">
+
+                    <div class="px-5 pt-5">
+                        <span
+                            class="inline-flex items-center rounded-full bg-[#00B4DB]/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#00B4DB]">
+                            LEADERSHIP
+                        </span>
+                    </div>
+
+                    <div class="mt-4 overflow-hidden">
+                        <img src="../public/image/gender.jpg" alt="Gender Awareness Club members"
+                            class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold text-slate-900">
+                            Gender Awareness Club
+                        </h2>
+
+                        <p class="mt-3 text-sm leading-6 text-slate-600">
+                            Promote equality, discuss gender inclusion, and organize
+                            campus awareness workshops.
+                        </p>
+
+                        <div class="mt-5 space-y-3 text-sm text-slate-600">
+                            <span class="flex items-center gap-3">
+                                <i class="fa-solid fa-users w-4 text-[#00B4DB]"></i>
+                                <span>11 Members</span>
+                            </span>
+
+                            <span class="flex items-center gap-3">
+                                <i class="fa-solid fa-calendar w-4 text-[#00B4DB]"></i>
+                                <span>Generation 2026-2027</span>
+                            </span>
+                        </div>
+
+                        <div class="mt-6 flex gap-3">
+                            <button type="button" onclick="openClubModal('Gender Awareness Club')"
+                                class="flex-1 rounded-lg border border-slate-300 px-4 py-2.5 text-center text-sm font-semibold text-slate-700 transition hover:border-[#00B4DB] hover:bg-[#00B4DB]/10 hover:text-[#00B4DB]">
+                                Details
+                            </button>
+
+                            <a href="./join.html"
+                                class="flex-1 rounded-lg bg-[#00B4DB] px-4 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-[#0099BD]">
+                                Join Club
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- ================= 09 CULINARY CLUB ================= -->
+                <article
+                    class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                    data-category="Arts & Media" data-name="Culinary Club">
+
+                    <div class="px-5 pt-5">
+                        <span
+                            class="inline-flex items-center rounded-full bg-[#00B4DB]/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#00B4DB]">
+                            ARTS & MEDIA
+                        </span>
+                    </div>
+
+                    <div class="mt-4 overflow-hidden">
+                        <img src="../public/image/cooking.jpg" alt="Culinary Club members"
+                            class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold text-slate-900">
+                            Culinary Club
+                        </h2>
+
+                        <p class="mt-3 text-sm leading-6 text-slate-600">
+                            Explore cooking techniques, baking, traditional Cambodian
+                            dishes, and nutrition basics.
+                        </p>
+
+                        <div class="mt-5 space-y-3 text-sm text-slate-600">
+                            <span class="flex items-center gap-3">
+                                <i class="fa-solid fa-users w-4 text-[#00B4DB]"></i>
+                                <span>11 Members</span>
+                            </span>
+
+                            <span class="flex items-center gap-3">
+                                <i class="fa-solid fa-calendar w-4 text-[#00B4DB]"></i>
+                                <span>Generation 2026-2027</span>
+                            </span>
+                        </div>
+
+                        <div class="mt-6 flex gap-3">
+                            <button type="button" onclick="openClubModal('Culinary Club')"
+                                class="flex-1 rounded-lg border border-slate-300 px-4 py-2.5 text-center text-sm font-semibold text-slate-700 transition hover:border-[#00B4DB] hover:bg-[#00B4DB]/10 hover:text-[#00B4DB]">
+                                Details
+                            </button>
+
+                            <a href="./join.html"
+                                class="flex-1 rounded-lg bg-[#00B4DB] px-4 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-[#0099BD]">
+                                Join Club
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- ================= 10 PHOTOGRAPHY CLUB ================= -->
+                <article
+                    class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                    data-category="Arts & Media" data-name="Photography Club">
+
+                    <div class="px-5 pt-5">
+                        <span
+                            class="inline-flex items-center rounded-full bg-[#00B4DB]/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#00B4DB]">
+                            ARTS & MEDIA
+                        </span>
+                    </div>
+
+                    <div class="mt-4 overflow-hidden">
+                        <img src="../public/image/photography.jpg" alt="Photography Club members"
+                            class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold text-slate-900">
+                            Photography Club
+                        </h2>
+
+                        <p class="mt-3 text-sm leading-6 text-slate-600">
+                            Learn camera basics, photo framing, lighting, editing,
+                            and photowalks.
+                        </p>
+
+                        <div class="mt-5 space-y-3 text-sm text-slate-600">
+                            <span class="flex items-center gap-3">
+                                <i class="fa-solid fa-users w-4 text-[#00B4DB]"></i>
+                                <span>11 Members</span>
+                            </span>
+
+                            <span class="flex items-center gap-3">
+                                <i class="fa-solid fa-calendar w-4 text-[#00B4DB]"></i>
+                                <span>Generation 2026-2027</span>
+                            </span>
+                        </div>
+
+                        <div class="mt-6 flex gap-3">
+                            <button type="button" onclick="openClubModal('Photography Club')"
+                                class="flex-1 rounded-lg border border-slate-300 px-4 py-2.5 text-center text-sm font-semibold text-slate-700 transition hover:border-[#00B4DB] hover:bg-[#00B4DB]/10 hover:text-[#00B4DB]">
+                                Details
+                            </button>
+
+                            <a href="./join.html"
+                                class="flex-1 rounded-lg bg-[#00B4DB] px-4 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-[#0099BD]">
+                                Join Club
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- ================= 11 PROMOTING INTEGRITY & DIGNITY CLUB ================= -->
+                <article
+                    class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                    data-category="Leadership" data-name="Promoting Integrity & Dignity Club">
+
+                    <div class="px-5 pt-5">
+                        <span
+                            class="inline-flex items-center rounded-full bg-[#00B4DB]/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#00B4DB]">
+                            LEADERSHIP
+                        </span>
+                    </div>
+
+                    <div class="mt-4 overflow-hidden">
+                        <img src="../public/image/Promoting.jpg" alt="Promoting Integrity and Dignity Club members"
+                            class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold text-slate-900">
+                            Promoting Integrity & Dignity Club
+                        </h2>
+
+                        <p class="mt-3 text-sm leading-6 text-slate-600">
+                            Engage in ethical discussions, civic actions, and
+                            dignity-building initiatives.
+                        </p>
+
+                        <div class="mt-5 space-y-3 text-sm text-slate-600">
+                            <span class="flex items-center gap-3">
+                                <i class="fa-solid fa-users w-4 text-[#00B4DB]"></i>
+                                <span>9 Members</span>
+                            </span>
+
+                            <span class="flex items-center gap-3">
+                                <i class="fa-solid fa-calendar w-4 text-[#00B4DB]"></i>
+                                <span>Generation 2026-2027</span>
+                            </span>
+                        </div>
+
+                        <div class="mt-6 flex gap-3">
+                            <button type="button" onclick="openClubModal('Promoting Integrity & Dignity Club')"
+                                class="flex-1 rounded-lg border border-slate-300 px-4 py-2.5 text-center text-sm font-semibold text-slate-700 transition hover:border-[#00B4DB] hover:bg-[#00B4DB]/10 hover:text-[#00B4DB]">
+                                Details
+                            </button>
+
+                            <a href="./join.html"
+                                class="flex-1 rounded-lg bg-[#00B4DB] px-4 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-[#0099BD]">
+                                Join Club
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- ================= 12 IT AWARENESS CLUB ================= -->
+                <article
+                    class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                    data-category="Technology" data-name="IT Awareness Club">
+
+                    <div class="px-5 pt-5">
+                        <span
+                            class="inline-flex items-center rounded-full bg-[#00B4DB]/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#00B4DB]">
+                            TECHNOLOGY
+                        </span>
+                    </div>
+
+                    <div class="mt-4 overflow-hidden">
+                        <img src="../public/image/IT awanes.jpg" alt="IT Awareness Club members"
+                            class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold text-slate-900">
+                            IT Awareness Club
+                        </h2>
+
+                        <p class="mt-3 text-sm leading-6 text-slate-600">
+                            Educate students on cybersecurity, digital tools,
+                            software safety, and technology trends.
+                        </p>
+
+                        <div class="mt-5 space-y-3 text-sm text-slate-600">
+                            <span class="flex items-center gap-3">
+                                <i class="fa-solid fa-users w-4 text-[#00B4DB]"></i>
+                                <span>12 Members</span>
+                            </span>
+
+                            <span class="flex items-center gap-3">
+                                <i class="fa-solid fa-calendar w-4 text-[#00B4DB]"></i>
+                                <span>Generation 2026-2027</span>
+                            </span>
+                        </div>
+
+                        <div class="mt-6 flex gap-3">
+                            <button type="button" onclick="openClubModal('IT Awareness Club')"
+                                class="flex-1 rounded-lg border border-slate-300 px-4 py-2.5 text-center text-sm font-semibold text-slate-700 transition hover:border-[#00B4DB] hover:bg-[#00B4DB]/10 hover:text-[#00B4DB]">
+                                Details
+                            </button>
+
+                            <a href="./join.html"
+                                class="flex-1 rounded-lg bg-[#00B4DB] px-4 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-[#0099BD]">
+                                Join Club
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- ================= 13 FASHION DESIGN CLUB ================= -->
+                <article
+                    class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                    data-category="Arts & Media" data-name="Fashion Design Club">
+
+                    <div class="px-5 pt-5">
+                        <span
+                            class="inline-flex items-center rounded-full bg-[#00B4DB]/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#00B4DB]">
+                            ARTS & MEDIA
+                        </span>
+                    </div>
+
+                    <div class="mt-4 overflow-hidden">
+                        <img src="../public/image/Design.jpg" alt="Fashion Design Club members"
+                            class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold text-slate-900">
+                            Fashion Design Club
+                        </h2>
+
+                        <p class="mt-3 text-sm leading-6 text-slate-600">
+                            Learn garment sketching, fabric choices, upcycling clothes,
+                            and fashion shows.
+                        </p>
+
+                        <div class="mt-5 space-y-3 text-sm text-slate-600">
+                            <span class="flex items-center gap-3">
+                                <i class="fa-solid fa-users w-4 text-[#00B4DB]"></i>
+                                <span>12 Members</span>
+                            </span>
+
+                            <span class="flex items-center gap-3">
+                                <i class="fa-solid fa-calendar w-4 text-[#00B4DB]"></i>
+                                <span>Generation 2026-2027</span>
+                            </span>
+                        </div>
+
+                        <div class="mt-6 flex gap-3">
+                            <button type="button" onclick="openClubModal('Fashion Design Club')"
+                                class="flex-1 rounded-lg border border-slate-300 px-4 py-2.5 text-center text-sm font-semibold text-slate-700 transition hover:border-[#00B4DB] hover:bg-[#00B4DB]/10 hover:text-[#00B4DB]">
+                                Details
+                            </button>
+
+                            <a href="./join.html"
+                                class="flex-1 rounded-lg bg-[#00B4DB] px-4 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-[#0099BD]">
+                                Join Club
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- ================= 14 STUDENT ASSOCIATION CLUB ================= -->
+                <article
+                    class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                    data-category="Leadership" data-name="Student Association Club">
+
+                    <div class="px-5 pt-5">
+                        <span
+                            class="inline-flex items-center rounded-full bg-[#00B4DB]/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#00B4DB]">
+                            LEADERSHIP
+                        </span>
+                    </div>
+
+                    <div class="mt-4 overflow-hidden">
+                        <img src="../public/image/Student asoiate.jpg" alt="Student Association Club members"
+                            class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold text-slate-900">
+                            Student Association Club
+                        </h2>
+
+                        <p class="mt-3 text-sm leading-6 text-slate-600">
+                            Represent student voices, coordinate campus activities,
+                            and build community leadership.
+                        </p>
+
+                        <div class="mt-5 space-y-3 text-sm text-slate-600">
+                            <span class="flex items-center gap-3">
+                                <i class="fa-solid fa-users w-4 text-[#00B4DB]"></i>
+                                <span>11 Members</span>
+                            </span>
+
+                            <span class="flex items-center gap-3">
+                                <i class="fa-solid fa-calendar w-4 text-[#00B4DB]"></i>
+                                <span>Generation 2026-2027</span>
+                            </span>
+                        </div>
+
+                        <div class="mt-6 flex gap-3">
+                            <button type="button" onclick="openClubModal('Student Association Club')"
+                                class="flex-1 rounded-lg border border-slate-300 px-4 py-2.5 text-center text-sm font-semibold text-slate-700 transition hover:border-[#00B4DB] hover:bg-[#00B4DB]/10 hover:text-[#00B4DB]">
+                                Details
+                            </button>
+
+                            <a href="./join.html"
+                                class="flex-1 rounded-lg bg-[#00B4DB] px-4 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-[#0099BD]">
+                                Join Club
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- ================= 15 YOGA CLUB ================= -->
+                <article
+                    class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                    data-category="Sports" data-name="YOGA Club">
+
+                    <div class="px-5 pt-5">
+                        <span
+                            class="inline-flex items-center rounded-full bg-[#00B4DB]/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#00B4DB]">
+                            SPORTS
+                        </span>
+                    </div>
+
+                    <div class="mt-4 overflow-hidden">
+                        <img src="../public/image/Yoga.jpg" alt="YOGA Club members"
+                            class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold text-slate-900">
+                            YOGA Club
+                        </h2>
+
+                        <p class="mt-3 text-sm leading-6 text-slate-600">
+                            Practice mindfulness, flexibility, breathing routines,
+                            and stress reduction.
+                        </p>
+
+                        <div class="mt-5 space-y-3 text-sm text-slate-600">
+                            <span class="flex items-center gap-3">
+                                <i class="fa-solid fa-users w-4 text-[#00B4DB]"></i>
+                                <span>5 Members</span>
+                            </span>
+
+                            <span class="flex items-center gap-3">
+                                <i class="fa-solid fa-calendar w-4 text-[#00B4DB]"></i>
+                                <span>Generation 2026-2027</span>
+                            </span>
+                        </div>
+
+                        <div class="mt-6 flex gap-3">
+                            <button type="button" onclick="openClubModal('YOGA Club')"
+                                class="flex-1 rounded-lg border border-slate-300 px-4 py-2.5 text-center text-sm font-semibold text-slate-700 transition hover:border-[#00B4DB] hover:bg-[#00B4DB]/10 hover:text-[#00B4DB]">
+                                Details
+                            </button>
+
+                            <a href="./join.html"
+                                class="flex-1 rounded-lg bg-[#00B4DB] px-4 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-[#0099BD]">
+                                Join Club
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- ================= 16 SPORTS CLUB ================= -->
+                <article
+                    class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                    data-category="Sports" data-name="Sports Club">
+
+                    <div class="px-5 pt-5">
+                        <span
+                            class="inline-flex items-center rounded-full bg-[#00B4DB]/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#00B4DB]">
+                            SPORTS
+                        </span>
+                    </div>
+
+                    <div class="mt-4 overflow-hidden">
+                        <img src="../public/image/Sport.jpg" alt="Sports Club members"
+                            class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold text-slate-900">
+                            Sports Club
+                        </h2>
+
+                        <p class="mt-3 text-sm leading-6 text-slate-600">
+                            Engage in football, basketball, badminton, volleyball,
+                            and campus tournaments to stay active.
+                        </p>
+
+                        <div class="mt-5 space-y-3 text-sm text-slate-600">
+                            <span class="flex items-center gap-3">
+                                <i class="fa-solid fa-users w-4 text-[#00B4DB]"></i>
+                                <span>12 Members</span>
+                            </span>
+
+                            <span class="flex items-center gap-3">
+                                <i class="fa-solid fa-calendar w-4 text-[#00B4DB]"></i>
+                                <span>Generation 2026-2027</span>
+                            </span>
+                        </div>
+
+                        <div class="mt-6 flex gap-3">
+                            <button type="button" onclick="openClubModal('Sports Club')"
+                                class="flex-1 rounded-lg border border-slate-300 px-4 py-2.5 text-center text-sm font-semibold text-slate-700 transition hover:border-[#00B4DB] hover:bg-[#00B4DB]/10 hover:text-[#00B4DB]">
+                                Details
+                            </button>
+
+                            <a href="./join.html"
+                                class="flex-1 rounded-lg bg-[#00B4DB] px-4 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-[#0099BD]">
+                                Join Club
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- NO RESULT -->
+                <div id="no-results" class="hidden text-center py-16">
+                    <i class="fa-solid fa-magnifying-glass text-3xl text-slate-300"></i>
+
+                    <h3 class="mt-4 text-lg font-bold text-[#050D60]">
+                        No clubs found
+                    </h3>
+
+                    <p class="mt-2 text-sm text-slate-500">
+                        Try another club name or category.
+                    </p>
+                </div>
+
+        </section>
+
+    </main>
+
+    <footer class="mt-20 bg-[#050A35] text-white">
+        <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-12">
+
+            <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+
+                <!-- ABOUT -->
+                <div>
+                    <h3 class="text-sm font-extrabold text-[#00B0DF]">
+                        PNC STUDENT CLUBS
+                    </h3>
+
+                    <p class="mt-4 text-xs leading-5 text-slate-400">
+                        A student club portal designed to help PNC
+                        students discover activities, connect with
+                        communities, and develop skills beyond the
+                        classroom.
+                    </p>
+                </div>
+
+                <!-- QUICK LINKS -->
+                <div>
+                    <h3 class="text-sm font-extrabold text-orange-400">
+                        Quick Links
+                    </h3>
+
+                    <div class="mt-4 space-y-2">
+
+                        <!-- Home -->
+                        <a href="../index.html" class="block text-xs text-slate-400 hover:text-white">
+                            Home
+                        </a>
+
+                        <!-- Student Clubs -->
+                        <a href="./club.html" class="block text-xs text-slate-400 hover:text-white">
+                            Student Clubs
+                        </a>
+
+                        <!-- Stories -->
+                        <a href="./stories.html" class="block text-xs text-slate-400 hover:text-white">
+                            Stories
+                        </a>
+
+                        <!-- Join a Club -->
+                        <a href="./join.html" class="block text-xs text-slate-400 hover:text-white">
+                            Join a Club
+                        </a>
+
+                        <!-- Contact -->
+                        <a href="./contact.html" class="block text-xs text-slate-400 hover:text-white">
+                            Contact
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- CATEGORIES -->
+                <div>
+                    <h3 class="text-sm font-extrabold text-orange-400">
+                        Categories
+                    </h3>
+
+                    <div class="mt-4 space-y-2 text-xs text-slate-400">
+
+                        <a href="./club.html?category=Technology" class="block transition hover:text-white">
+                            Technology
+                        </a>
+
+                        <a href="./club.html?category=Arts%20%26%20Media" class="block transition hover:text-white">
+                            Arts &amp; Music
+                        </a>
+
+                        <a href="./club.html?category=Leadership" class="block transition hover:text-white">
+                            Leadership
+                        </a>
+
+                        <a href="./club.html?category=Sports" class="block transition hover:text-white">
+                            Sports & Health
+                        </a>
+
+                        <a href="./club.html?category=Academic" class="block transition hover:text-white">
+                            Academic
+                        </a>
+
+                    </div>
+                </div>
+                <!-- PNC -->
+                <div>
+                    <h3 class="text-sm font-extrabold text-orange-400">
+                        Passerelles Numériques
+                    </h3>
+
+                    <p class="mt-4 text-xs leading-5 text-slate-400">
+                        Building brighter futures through digital
+                        education and student development.
+                    </p>
+
+                    <a href="https://www.passerellesnumeriques.org/" target="_blank" rel="noopener noreferrer"
+                        class="mt-4 inline-flex items-center text-xs font-semibold text-[#00B0DF] hover:text-white">
+                        Visit PNC
+                        <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- COPYRIGHT -->
+
+            <div class="mt-10 border-t border-white/10 pt-6 text-center">
+                <p class="text-xs text-slate-500">
+                    © 2026 Passerelles Numériques Cambodia (PNC).
+                    All rights reserved.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
     <!-- ================= STYLE ================= -->
 
     <style>
@@ -321,56 +1541,1019 @@
             color: #050D60;
         }
     </style>
+    <style>
+        /* ================= CLUB CARD ================= */
+
+        .club-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 18px;
+            padding: 22px;
+            min-height: 285px;
+
+            display: flex;
+            flex-direction: column;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+        }
+
+        .club-card:hover {
+            transform: translateY(-5px);
+            border-color: #00B0DF;
+
+            box-shadow:
+                0 15px 35px rgba(5, 13, 96, 0.08);
+        }
 
 
-    <!-- ================= MOBILE MENU SCRIPT ================= -->
+        /* ICON */
+
+        .club-icon {
+            width: 44px;
+            height: 44px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 11px;
+
+            color: white;
+            font-size: 17px;
+        }
 
 
+        /* CATEGORY */
+
+        .club-category {
+            padding: 6px 10px;
+
+            border-radius: 999px;
+
+            background: #eaf9fd;
+            border: 1px solid #c9eef7;
+
+            color: #00A0CA;
+
+            font-size: 8px;
+            font-weight: 800;
+
+            letter-spacing: 0.4px;
+            white-space: nowrap;
+        }
+
+
+        /* TITLE */
+
+        .club-title {
+            margin-top: 17px;
+
+            color: #050D60;
+
+            font-size: 17px;
+            line-height: 1.3;
+            font-weight: 800;
+        }
+
+
+        /* DESCRIPTION */
+
+        .club-description {
+            margin-top: 8px;
+
+            color: #64748b;
+
+            font-size: 11px;
+            line-height: 1.65;
+        }
+
+
+        /* INFORMATION */
+
+        .club-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+
+            margin-top: auto;
+            padding-top: 15px;
+            padding-bottom: 10px;
+
+            border-bottom: 1px solid #e2e8f0;
+
+            color: #94a3b8;
+
+            font-size: 9px;
+        }
+
+        .club-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .club-info i {
+            color: #00B0DF;
+        }
+
+        .club-info span:last-child i {
+            color: #ff6b00;
+        }
+
+
+        /* BUTTONS */
+
+        .club-actions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 6px;
+
+            margin-top: 10px;
+        }
+
+
+        .details-btn,
+        .join-btn {
+            height: 34px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 8px;
+
+            font-size: 10px;
+            font-weight: 700;
+
+            transition: all 0.25s ease;
+        }
+
+
+        .details-btn {
+            border: 1px solid #e2e8f0;
+            color: #050D60;
+            background: white;
+        }
+
+        .details-btn:hover {
+            border-color: #050D60;
+            background: #f8fafc;
+        }
+
+
+        .join-btn {
+            background: #00B0DF;
+            color: white;
+        }
+
+        .join-btn:hover {
+            background: #050D60;
+        }
+
+
+        /* CATEGORY FILTER */
+
+        .category-btn {
+            height: 36px;
+
+            padding: 0 15px;
+
+            border: 1px solid #e2e8f0;
+            border-radius: 999px;
+
+            background: white;
+
+            color: #475569;
+
+            font-size: 10px;
+            font-weight: 700;
+
+            transition: all 0.25s ease;
+        }
+
+        .category-btn:hover {
+            border-color: #00B0DF;
+            color: #00B0DF;
+        }
+
+        .category-btn.active-category {
+            background: #00B0DF;
+            border-color: #00B0DF;
+            color: white;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 640px) {
+
+            .club-card {
+                padding: 20px;
+            }
+
+            .club-info {
+                font-size: 8px;
+            }
+
+            .club-category {
+                font-size: 7px;
+            }
+
+        }
+    </style>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
     <script>
+
+        /* ==================================================
+           MOBILE MENU SCRIPT
+        ================================================== */
 
         const menuButton = document.getElementById("menu-button");
         const mobileMenu = document.getElementById("mobile-menu");
         const menuIcon = document.getElementById("menu-icon");
 
-        menuButton.addEventListener("click", () => {
+        if (menuButton && mobileMenu && menuIcon) {
 
-            mobileMenu.classList.toggle("hidden");
+            menuButton.addEventListener("click", () => {
 
-            if (mobileMenu.classList.contains("hidden")) {
+                mobileMenu.classList.toggle("hidden");
 
-                menuIcon.classList.remove("fa-xmark");
-                menuIcon.classList.add("fa-bars");
+                if (mobileMenu.classList.contains("hidden")) {
 
-                menuButton.setAttribute("aria-expanded", "false");
+                    menuIcon.classList.remove("fa-xmark");
+                    menuIcon.classList.add("fa-bars");
 
-            } else {
+                    menuButton.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
 
-                menuIcon.classList.remove("fa-bars");
-                menuIcon.classList.add("fa-xmark");
+                } else {
 
-                menuButton.setAttribute("aria-expanded", "true");
+                    menuIcon.classList.remove("fa-bars");
+                    menuIcon.classList.add("fa-xmark");
 
+                    menuButton.setAttribute(
+                        "aria-expanded",
+                        "true"
+                    );
+                }
+            });
+
+
+            const mobileLinks =
+                document.querySelectorAll(".mobile-nav-link");
+
+            mobileLinks.forEach((link) => {
+
+                link.addEventListener("click", () => {
+
+                    mobileMenu.classList.add("hidden");
+
+                    menuIcon.classList.remove("fa-xmark");
+                    menuIcon.classList.add("fa-bars");
+
+                    menuButton.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+                });
+
+            });
+        }
+
+
+
+        /* ==================================================
+           CLUB SEARCH + FILTER
+        ================================================== */
+
+        const searchInput =
+            document.getElementById("club-search");
+
+        const categoryButtons =
+            document.querySelectorAll(".category-btn");
+
+        const clubCards =
+            document.querySelectorAll("#clubs-grid article");
+
+        const noResults =
+            document.getElementById("no-results");
+
+        let selectedCategory = "All";
+
+
+        function filterClubs() {
+
+            const searchText =
+                searchInput
+                    ? searchInput.value.toLowerCase().trim()
+                    : "";
+
+            let visibleCount = 0;
+
+
+            clubCards.forEach((card) => {
+
+                const clubName =
+                    (card.dataset.name || "").toLowerCase();
+
+                const clubCategory =
+                    card.dataset.category || "";
+
+
+                const matchesSearch =
+                    clubName.includes(searchText);
+
+                const matchesCategory =
+                    selectedCategory === "All" ||
+                    clubCategory === selectedCategory;
+
+
+                if (matchesSearch && matchesCategory) {
+
+                    card.classList.remove("hidden");
+                    visibleCount++;
+
+                } else {
+
+                    card.classList.add("hidden");
+                }
+
+            });
+
+
+            if (noResults) {
+
+                if (visibleCount === 0) {
+
+                    noResults.classList.remove("hidden");
+
+                } else {
+
+                    noResults.classList.add("hidden");
+                }
             }
-
-        });
-
-
-        const mobileLinks =
-            document.querySelectorAll(".mobile-nav-link");
+        }
 
 
-        mobileLinks.forEach((link) => {
 
-            link.addEventListener("click", () => {
+        /* ==================================================
+           SEARCH
+        ================================================== */
 
-                mobileMenu.classList.add("hidden"); menuIcon.classList.remove("fa-xmark");
-                menuIcon.classList.add("fa-bars");
+        if (searchInput) {
 
-                menuButton.setAttribute("aria-expanded", "false");
+            searchInput.addEventListener(
+                "input",
+                filterClubs
+            );
+        }
+
+
+
+        /* ==================================================
+           CATEGORY BUTTONS
+        ================================================== */
+
+        categoryButtons.forEach((button) => {
+
+            button.addEventListener("click", () => {
+
+                categoryButtons.forEach((btn) => {
+
+                    btn.classList.remove(
+                        "active-category"
+                    );
+
+                });
+
+
+                button.classList.add(
+                    "active-category"
+                );
+
+
+                selectedCategory =
+                    button.dataset.category;
+
+
+                filterClubs();
 
             });
 
         });
+
+
+
+        /* ==================================================
+           CLUB DETAILS DATA
+        ================================================== */
+
+        const clubs = {
+
+            "Robotic Club": {
+
+                category: "Technology",
+
+                members: "12 Members",
+
+                description:
+                    "Explore robotics, mechanics, automation, and basic AI programming through hands-on projects.",
+
+                activities: [
+                    "Build and program simple robots.",
+                    "Learn basic robotics and automation.",
+                    "Practice programming through hands-on projects.",
+                    "Work together on technology projects and competitions."
+                ]
+            },
+
+
+            "Library Club": {
+
+                category: "Academic",
+
+                members: "11 Members",
+
+                description:
+                    "Promote reading culture, book discussions, archive management, and literature events.",
+
+                activities: [
+                    "Read and discuss books together.",
+                    "Share useful books and learning resources.",
+                    "Organize reading activities and literature events.",
+                    "Help maintain and organize library resources."
+                ]
+            },
+
+
+            "Music Club": {
+
+                category: "Arts & Media",
+
+                members: "11 Members",
+
+                description:
+                    "Practice vocals, acoustic instruments, and music production for campus events.",
+
+                activities: [
+                    "Practice singing and musical instruments.",
+                    "Prepare performances for school events.",
+                    "Learn basic music production.",
+                    "Work together on musical performances."
+                ]
+            },
+
+
+            "Web Club": {
+
+                category: "Technology",
+
+                members: "13 Members",
+
+                description:
+                    "Build websites, web apps, UI/UX designs, and learn frontend and backend technologies.",
+
+                activities: [
+                    "Learn HTML, CSS, JavaScript, and web development.",
+                    "Build websites and web applications.",
+                    "Practice UI/UX design.",
+                    "Work together on web projects."
+                ]
+            },
+
+
+            "Public Speaking Club": {
+
+                category: "Leadership",
+
+                members: "12 Members",
+
+                description:
+                    "Master speech delivery, debate skills, stage presence, and overcome stage fright.",
+
+                activities: [
+                    "Practice public speaking.",
+                    "Improve presentation and communication skills.",
+                    "Practice debates and discussions.",
+                    "Build confidence when speaking in front of others."
+                ]
+            },
+
+
+            "Aerobic Club": {
+
+                category: "Sports",
+
+                members: "10 Members",
+
+                description:
+                    "Join fitness classes, build cardio endurance, and stay active with our aerobic exercise community.",
+
+                activities: [
+                    "Practice aerobic exercises.",
+                    "Improve fitness and cardio endurance.",
+                    "Join group fitness activities.",
+                    "Build healthy exercise habits."
+                ]
+            },
+
+
+            "Films and Media Club": {
+
+                category: "Arts & Media",
+
+                members: "12 Members",
+
+                description:
+                    "Short film production, video editing, storyboarding, and campus media coverage.",
+
+                activities: [
+                    "Create short films and videos.",
+                    "Learn video editing.",
+                    "Practice storyboarding and storytelling.",
+                    "Cover school activities through media."
+                ]
+            },
+
+
+            "Gender Awareness Club": {
+
+                category: "Leadership",
+
+                members: "11 Members",
+
+                description:
+                    "Promote equality, discuss gender inclusion, and organize campus awareness workshops.",
+
+                activities: [
+                    "Discuss gender equality and inclusion.",
+                    "Organize awareness activities.",
+                    "Share ideas about respect and equality.",
+                    "Support positive communication among students."
+                ]
+            },
+
+
+            "Culinary Club": {
+
+                category: "Arts & Media",
+
+                members: "11 Members",
+
+                description:
+                    "Explore cooking techniques, baking, traditional Cambodian dishes, and nutrition basics.",
+
+                activities: [
+                    "Learn basic cooking techniques.",
+                    "Practice baking.",
+                    "Prepare traditional Cambodian dishes.",
+                    "Learn about nutrition and healthy food."
+                ]
+            },
+
+
+            "Photography Club": {
+
+                category: "Arts & Media",
+
+                members: "11 Members",
+
+                description:
+                    "Learn camera basics, photo framing, lighting, editing, and photowalks.",
+
+                activities: [
+                    "Learn camera basics.",
+                    "Practice photography composition.",
+                    "Learn lighting and photo editing.",
+                    "Join photography walks around campus."
+                ]
+            },
+
+
+            "Promoting Integrity & Dignity Club": {
+
+                category: "Leadership",
+
+                members: "9 Members",
+
+                description:
+                    "Engage in ethical discussions, civic actions, and dignity-building initiatives.",
+
+                activities: [
+                    "Discuss integrity and ethical behavior.",
+                    "Promote respect and dignity.",
+                    "Join community activities.",
+                    "Encourage responsible student behavior."
+                ]
+            },
+
+
+            "IT Awareness Club": {
+
+                category: "Technology",
+
+                members: "12 Members",
+
+                description:
+                    "Educate students on cybersecurity, digital tools, software safety, and tech trends.",
+
+                activities: [
+                    "Learn about cybersecurity.",
+                    "Practice safe use of digital tools.",
+                    "Learn about software and technology trends.",
+                    "Share useful technology knowledge."
+                ]
+            },
+
+
+            "Fashion Design Club": {
+
+                category: "Arts & Media",
+
+                members: "12 Members",
+
+                description:
+                    "Learn garment sketching, fabric choices, upcycling clothes, and fashion shows.",
+
+                activities: [
+                    "Practice fashion sketching.",
+                    "Learn about fabrics and clothing design.",
+                    "Create designs using recycled materials.",
+                    "Prepare fashion shows and exhibitions."
+                ]
+            },
+
+
+            "Student Association Club": {
+
+                category: "Leadership",
+
+                members: "11 Members",
+
+                description:
+                    "Represent student voices, coordinate campus activities, and build community leadership.",
+
+                activities: [
+                    "Represent student ideas and concerns.",
+                    "Organize campus activities.",
+                    "Develop leadership skills.",
+                    "Work together to support the student community."
+                ]
+            },
+
+
+            "YOGA Club": {
+
+                category: "Sports",
+
+                members: "5 Members",
+
+                description:
+                    "Practice mindfulness, flexibility, breathing routines, and stress reduction.",
+
+                activities: [
+                    "Practice basic yoga positions.",
+                    "Improve flexibility and balance.",
+                    "Practice breathing exercises.",
+                    "Learn simple mindfulness techniques."
+                ]
+            },
+
+
+            "Sports Club": {
+
+                category: "Sports",
+
+                members: "12 Members",
+
+                description:
+                    "Engage in football, basketball, badminton, volleyball, and campus tournaments to stay active.",
+
+                activities: [
+                    "Play different team sports.",
+                    "Practice football, basketball, badminton, and volleyball.",
+                    "Organize campus tournaments.",
+                    "Build teamwork and an active lifestyle."
+                ]
+            }
+
+        };
+
+
+
+        /* ==================================================
+           OPEN CLUB DETAILS
+        ================================================== */
+
+        function openClubModal(clubName) {
+
+            const club = clubs[clubName];
+
+
+            if (!club) {
+
+                console.error(
+                    "Club not found:",
+                    clubName
+                );
+
+                return;
+            }
+
+
+            const modal =
+                document.getElementById("clubModal");
+
+
+            if (!modal) {
+
+                console.error(
+                    "ERROR: clubModal was not found in HTML."
+                );
+
+                return;
+            }
+
+
+            /* CLUB NAME */
+
+            const modalClubName =
+                document.getElementById(
+                    "modalClubName"
+                );
+
+            const modalClubNameInfo =
+                document.getElementById(
+                    "modalClubNameInfo"
+                );
+
+
+            if (modalClubName) {
+
+                modalClubName.textContent =
+                    clubName;
+            }
+
+
+            if (modalClubNameInfo) {
+
+                modalClubNameInfo.textContent =
+                    clubName;
+            }
+
+
+
+            /* CATEGORY */
+
+            const modalCategory =
+                document.getElementById(
+                    "modalCategory"
+                );
+
+
+            if (modalCategory) {
+
+                modalCategory.textContent =
+                    club.category;
+            }
+
+
+
+            /* MEMBERS */
+
+            const modalMembers =
+                document.getElementById(
+                    "modalMembers"
+                );
+
+
+            if (modalMembers) {
+
+                modalMembers.textContent =
+                    club.members;
+            }
+
+
+
+            /* TOTAL */
+
+            const modalTotal =
+                document.getElementById(
+                    "modalTotal"
+                );
+
+
+            if (modalTotal) {
+
+                modalTotal.textContent =
+                    club.members;
+            }
+
+
+
+            /* DESCRIPTION */
+
+            const modalDescription =
+                document.getElementById(
+                    "modalDescription"
+                );
+
+
+            if (modalDescription) {
+
+                modalDescription.textContent =
+                    club.description;
+            }
+
+
+
+            /* ACTIVITIES */
+
+            const activitiesList =
+                document.getElementById(
+                    "modalActivities"
+                );
+
+
+            if (activitiesList) {
+
+                activitiesList.innerHTML = "";
+
+
+                club.activities.forEach(
+                    (activity) => {
+
+                        const li =
+                            document.createElement(
+                                "li"
+                            );
+
+
+                        li.className =
+                            "flex items-start gap-3 text-sm leading-6 text-slate-600";
+
+
+                        li.innerHTML = `
+                        <i class="fa-solid fa-check mt-1 text-[#00B4DB]"></i>
+                        <span>${activity}</span>
+                    `;
+
+
+                        activitiesList.appendChild(li);
+
+                    }
+                );
+            }
+
+
+
+            /* OPEN MODAL */
+
+            modal.classList.remove(
+                "hidden"
+            );
+
+            modal.classList.add(
+                "flex"
+            );
+
+
+            document.body.classList.add(
+                "overflow-hidden"
+            );
+        }
+
+
+
+        /* ==================================================
+           CLOSE CLUB DETAILS
+        ================================================== */
+
+        function closeClubModal() {
+
+            const modal =
+                document.getElementById(
+                    "clubModal"
+                );
+
+
+            if (!modal) {
+                return;
+            }
+
+
+            modal.classList.add(
+                "hidden"
+            );
+
+            modal.classList.remove(
+                "flex"
+            );
+
+
+            document.body.classList.remove(
+                "overflow-hidden"
+            );
+        }
+
+
+
+        /* ==================================================
+           CLICK OUTSIDE MODAL
+        ================================================== */
+
+        function handleModalClick(event) {
+
+            if (
+                event.target.id ===
+                "clubModal"
+            ) {
+
+                closeClubModal();
+            }
+        }
+
+
+
+        /* ==================================================
+           ESC KEY
+        ================================================== */
+
+        document.addEventListener(
+            "keydown",
+            (event) => {
+
+                if (
+                    event.key === "Escape"
+                ) {
+
+                    closeClubModal();
+                }
+
+            }
+        );
+
+
+
+        /* ==================================================
+           FOOTER CATEGORY LINKS
+           
+           Example:
+           club.html?category=Technology
+        ================================================== */
+
+        const urlParams =
+            new URLSearchParams(
+                window.location.search
+            );
+
+        const categoryFromURL =
+            urlParams.get("category");
+
+
+        if (categoryFromURL) {
+
+            const matchingButton =
+                Array.from(categoryButtons).find(
+                    (button) =>
+                        button.dataset.category ===
+                        categoryFromURL
+                );
+
+
+            if (matchingButton) {
+
+                selectedCategory =
+                    categoryFromURL;
+
+
+                categoryButtons.forEach(
+                    (button) => {
+
+                        button.classList.remove(
+                            "active-category"
+                        );
+                    }
+                );
+
+
+                matchingButton.classList.add(
+                    "active-category"
+                );
+
+
+                filterClubs();
+            }
+        }
 
     </script>
 
