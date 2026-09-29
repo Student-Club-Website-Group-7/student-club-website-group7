@@ -623,12 +623,12 @@
                 <!-- ================= 06 AEROBIC CLUB ================= -->
                 <article
                     class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-                    data-category="Sports" data-name="Aerobic Club">
+                    data-category="Sports & Health" data-name="Aerobic Club">
 
                     <div class="px-5 pt-5">
                         <span
                             class="inline-flex items-center rounded-full bg-[#00B4DB]/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#00B4DB]">
-                            SPORTS
+                            SPORTS & Health
                         </span>
                     </div>
 
@@ -1109,12 +1109,12 @@
                 <!-- ================= 15 YOGA CLUB ================= -->
                 <article
                     class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-                    data-category="Sports" data-name="YOGA Club">
+                    data-category="Sports & Health" data-name="YOGA Club">
 
                     <div class="px-5 pt-5">
                         <span
                             class="inline-flex items-center rounded-full bg-[#00B4DB]/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#00B4DB]">
-                            SPORTS
+                            SPORTS & Health
                         </span>
                     </div>
 
@@ -1160,26 +1160,26 @@
                 </article>
 
 
-                <!-- ================= 16 SPORTS CLUB ================= -->
+                <!-- ================= 16 SPORT CLUB ================= -->
                 <article
                     class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-                    data-category="Sports" data-name="Sports Club">
+                    data-category="Sports & Health" data-name="Sport Club">
 
                     <div class="px-5 pt-5">
                         <span
                             class="inline-flex items-center rounded-full bg-[#00B4DB]/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#00B4DB]">
-                            SPORTS
+                            SPORTS & Health
                         </span>
                     </div>
 
                     <div class="mt-4 overflow-hidden">
-                        <img src="../public/image/Sport.jpg" alt="Sports Club members"
+                        <img src="../public/image/Sport.jpg" alt="Sport Club members"
                             class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105">
                     </div>
 
                     <div class="p-6">
                         <h2 class="text-2xl font-bold text-slate-900">
-                            Sports Club
+                            Sport Club
                         </h2>
 
                         <p class="mt-3 text-sm leading-6 text-slate-600">
@@ -1200,7 +1200,7 @@
                         </div>
 
                         <div class="mt-6 flex gap-3">
-                            <button type="button" onclick="openClubModal('Sports Club')"
+                            <button type="button" onclick="openClubModal('Sport Club')"
                                 class="flex-1 rounded-lg border border-slate-300 px-4 py-2.5 text-center text-sm font-semibold text-slate-700 transition hover:border-[#00B4DB] hover:bg-[#00B4DB]/10 hover:text-[#00B4DB]">
                                 Details
                             </button>
@@ -2051,7 +2051,7 @@
 
             "Aerobic Club": {
 
-                category: "Sports",
+                category: "Sports & Health",
 
                 members: "10 Members",
 
@@ -2213,7 +2213,7 @@
 
             "YOGA Club": {
 
-                category: "Sports",
+                category: "Sports & Health",
 
                 members: "5 Members",
 
@@ -2229,9 +2229,9 @@
             },
 
 
-            "Sports Club": {
+            "Sport Club": {
 
-                category: "Sports",
+                category: "Sports & Health",
 
                 members: "12 Members",
 
@@ -2553,6 +2553,15 @@
 
                 filterClubs();
             }
+        }
+
+        //  OPEN SPECIFIC CLUB FROM HOME PAGE
+
+        const clubFromURL =
+            new URLSearchParams(window.location.search).get("club");
+
+        if (clubFromURL && clubs[clubFromURL]) {
+            openClubModal(clubFromURL);
         }
 
     </script>
