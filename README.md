@@ -4,7 +4,27 @@ A responsive multi-page student club portal for Passerelles Numériques Cambodia
 
 ## Team
 
-<img src="public/image/photo_2026-09-22_20-17-37.jpg" alt="PNC Student Club Team" width="1200" />
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="public/Dalen.png" width="180" height="180" alt="Dalen" /><br />
+        <strong>Dalen</strong><br />
+        <em>Developer</em>
+      </td>
+      <td align="center">
+        <img src="public/Rathana.png" width="180" height="180" alt="Rathana" /><br />
+        <strong>Rathana</strong><br />
+        <em>Developer</em>
+      </td>
+      <td align="center">
+        <img src="public/SreyMom.jpg" width="180" height="180" alt="Sreymom" /><br />
+        <strong>Sreymom</strong><br />
+        <em>Developer</em>
+      </td>
+    </tr>
+  </table>
+</div>
 
 ## Project Overview
 
