@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+>
+
+    <url>
+        <loc>https://student-club-website-neon.vercel.app/</loc>
+    </url>
+
+    <url>
+        <loc>https://student-club-website-neon.vercel.app/page/club.html</loc>
+    </url>
+
+    <url>
+        <loc>https://student-club-website-neon.vercel.app/page/stories.html</loc>
+    </url>
+
+    <url>
+        <loc>https://student-club-website-neon.vercel.app/page/join.html</loc>
+    </url>
+
+    <url>
+        <loc>https://student-club-website-neon.vercel.app/page/contact.html</loc>
+    </url>
+
+</urlset>

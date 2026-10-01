@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://student-club-website-neon.vercel.app/sitemap.xml
