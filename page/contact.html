@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" href="/public/Logo.png" type="image/x-icon">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/Logo.png" type="image/png">
+
     <title>Contact | Student Club Website</title>
 
     <!-- Font Awesome -->
@@ -17,18 +20,20 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <style>
+                    /* NAVIGATION */
+
         .nav-link {
             display: flex;
             align-items: center;
             justify-content: center;
 
-            padding: 12px 20px;
+            padding: 10px 14px;
 
             border-radius: 12px;
 
             color: #050D60;
 
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 500;
 
             transition:
@@ -37,6 +42,12 @@
                 transform 0.3s ease;
         }
 
+        @media (min-width: 1024px) {
+            .nav-link {
+                padding: 12px 20px;
+                font-size: 15px;
+            }
+        }
 
         .nav-link:hover {
             background-color: white;
@@ -53,29 +64,25 @@
                 0 5px 14px rgba(5, 13, 96, 0.18);
         }
 
-
         .nav-link.active:hover {
             background-color: #00B0DF;
             color: white;
         }
 
-
-        /* MOBILE NAV */
+                /* ............. MOBILE NAVIGATION................ */
 
         .mobile-nav-link {
             display: block;
-
             width: 100%;
 
-            padding: 14px 16px;
-
+            padding: 13px 15px;
             margin-bottom: 5px;
 
             border-radius: 12px;
 
             color: #050D60;
 
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 500;
 
             transition:
@@ -84,13 +91,11 @@
                 padding-left 0.3s ease;
         }
 
-
         .mobile-nav-link:hover {
             background-color: #f1f5f9;
             color: #00B0DF;
-            padding-left: 21px;
+            padding-left: 20px;
         }
-
 
         .active-mobile {
             background-color: #050D60;
@@ -98,55 +103,61 @@
             font-weight: 600;
         }
 
-
         .active-mobile:hover {
             background-color: #00B0DF;
             color: white;
-            padding-left: 16px;
+            padding-left: 15px;
         }
     </style>
 </head>
 
+
 <body class="bg-slate-50">
 
-    <!-- ================= HEADER ================= -->
+                        <!-- .....................HEADER........................ -->
 
     <header class="sticky top-0 z-50 w-full
-     bg-white/95 backdrop-blur-xl
-     border-b border-slate-200
-     shadow-sm">
+        bg-white/95 backdrop-blur-xl
+        border-b border-slate-200
+        shadow-sm">
 
         <div class="max-w-7xl mx-auto
-      h-[88px]
-      px-5 sm:px-6 lg:px-8
-      flex items-center justify-between">
+            h-[70px] sm:h-[80px] lg:h-[88px]
+            px-4 sm:px-6 lg:px-8
+            flex items-center justify-between">
+
 
             <!-- LOGO -->
 
             <a href="../index.html" class="shrink-0 group">
 
-                <img src="/image/photo_2026-09-22_20-17-37.jpg" alt="Student Club Website" class="w-[165px] sm:w-[185px] lg:w-[205px]
-        h-auto object-contain
-        transition-all duration-300
-        group-hover:scale-[1.03]">
+                <img src="/image/photo_2026-09-22_20-17-37.jpg" alt="Student Club Website" class="w-[125px]
+                    sm:w-[160px]
+                    md:w-[180px]
+                    lg:w-[205px]
+                    h-auto
+                    object-contain
+                    transition-all
+                    duration-300
+                    group-hover:scale-[1.03]">
 
             </a>
 
 
-            <!-- DESKTOP NAVIGATION -->
-
+                <!-- .....................DESKTOP NAVIGATION................................ -->
             <nav class="hidden md:flex
-       items-center gap-1
-       p-1.5
-       bg-slate-50
-       border border-slate-200
-       rounded-2xl">
+                items-center
+                gap-1
+                p-1.5
+                bg-slate-50
+                border border-slate-200
+                rounded-2xl">
 
                 <a href="../index.html" class="nav-link">
                     Home
                 </a>
 
-                <a href="./club.html" class="nav-link ">
+                <a href="./club.html" class="nav-link">
                     Clubs
                 </a>
 
@@ -164,41 +175,42 @@
 
             </nav>
 
-
-            <!-- MOBILE BUTTON -->
+            <!-- .........................MOBILE BUTTON............................ -->
 
             <button id="menu-button" type="button" aria-label="Open menu" aria-expanded="false" class="md:hidden
-       w-11 h-11
-       flex items-center justify-center
-       rounded-xl
-       bg-[#050D60]
-       text-white
-       shadow-md
-      hover:bg-[#00B0DF]
-       transition-all duration-300">
+                w-10 h-10
+                sm:w-11 sm:h-11
+                flex items-center justify-center
+                rounded-xl
+                bg-[#050D60]
+                text-white
+                shadow-md
+                hover:bg-[#00B0DF]
+                transition-all
+                duration-300">
 
-                <i id="menu-icon" class="fa-solid fa-bars text-lg"></i>
+                <i id="menu-icon" class="fa-solid fa-bars text-base sm:text-lg">
+                </i>
 
             </button>
 
         </div>
 
-
-        <!-- MOBILE MENU -->
+<!-- ...............................MOBILE MENU..................................... -->
 
         <div id="mobile-menu" class="hidden md:hidden
-      border-t border-slate-200
-      bg-white">
+            border-t border-slate-200
+            bg-white">
 
             <nav class="max-w-7xl mx-auto
-       px-5 sm:px-6
-       py-4">
+                px-4 sm:px-6
+                py-4">
 
                 <a href="../index.html" class="mobile-nav-link">
                     Home
                 </a>
 
-                <a href="./club.html" class="mobile-nav-link ">
+                <a href="./club.html" class="mobile-nav-link">
                     Clubs
                 </a>
 
@@ -221,43 +233,100 @@
     </header>
 
 
-    <!-- ================= MAIN ================= -->
+    <!-- =========================================================
+         MAIN
+         ========================================================= -->
 
     <main>
 
-        <!-- ================= HERO ================= -->
-        <section class="relative overflow-hidden border-b border-slate-200">
 
-            <!-- Background Picture -->
-            <img src="/image/Hero-for-contact.png" alt="Student Club"
-                class="absolute inset-0 h-full w-full object-cover ">
+        <!-- =====================================================
+             HERO
+             ===================================================== -->
 
-            <!-- Dark/Cyan Overlay -->
-            <div class="absolute inset-0 bg-[#050B30]/75"></div>
+        <section class="relative overflow-hidden
+            border-b border-slate-200
+            min-h-[400px]
+            sm:min-h-[440px]
+            lg:min-h-[480px]">
+
+
+            <!-- Background -->
+
+            <img src="/image/Hero-for-contact.png" alt="Student Club" class="absolute inset-0
+                h-full w-full
+                object-cover">
+
+
+            <!-- Overlay -->
+
+            <div class="absolute inset-0
+                bg-[#050B30]/75">
+            </div>
+
 
             <!-- Hero Content -->
-            <div class="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-16 lg:py-20">
+
+            <div class="relative
+                max-w-7xl mx-auto
+                px-4 sm:px-6 lg:px-8
+                py-12 sm:py-16 lg:py-20">
 
                 <div class="max-w-3xl">
 
+
                     <!-- Badge -->
-                    <span
-                        class="inline-flex items-center gap-2 rounded-full bg-[#FE5900] px-4 py-2 text-sm font-bold text-white">
+
+                    <span class="inline-flex
+                        items-center
+                        gap-2
+                        rounded-full
+                        bg-[#FE5900]
+                        px-3 py-1.5
+                        sm:px-4 sm:py-2
+                        text-xs sm:text-sm
+                        font-bold
+                        text-white">
+
                         <i class="fa-solid fa-envelope"></i>
+
                         Get in Touch
+
                     </span>
 
+
                     <!-- Title -->
-                    <h1 class="mt-5 text-4xl sm:text-5xl font-black tracking-tight text-white">
+
+                    <h1 class="mt-5
+                        text-3xl
+                        sm:text-4xl
+                        md:text-5xl
+                        font-black
+                        leading-tight
+                        tracking-tight
+                        text-white">
+
                         Contact Club Secretariat
+
                     </h1>
 
+
                     <!-- Description -->
-                    <p class="mt-5 max-w-2xl text-base sm:text-lg leading-8 text-white/90">
+
+                    <p class="mt-5
+                        max-w-2xl
+                        text-sm
+                        sm:text-base
+                        lg:text-lg
+                        leading-7
+                        sm:leading-8
+                        text-white/90">
+
                         Have a question about a student club, want to join
                         an activity, or need more information? Send us a
                         message and we will help you connect with the right
                         club leader.
+
                     </p>
 
                 </div>
@@ -267,58 +336,127 @@
         </section>
 
 
-        <!-- Contact Section -->
-        <section class="py-16 lg:py-20">
+        <!-- =====================================================
+             CONTACT SECTION
+             ===================================================== -->
 
-            <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+        <section class="py-10
+            sm:py-14
+            lg:py-20">
 
-                <div class="grid gap-8 lg:grid-cols-5">
+            <div class="max-w-7xl mx-auto
+                px-4 sm:px-6 lg:px-8">
 
-                    <!-- ================= CONTACT INFORMATION ================= -->
+                <div class="grid
+                    gap-6
+                    sm:gap-8
+                    lg:grid-cols-5">
+
+
+                    <!-- =================================================
+                         CONTACT INFORMATION
+                         ================================================= -->
 
                     <div class="lg:col-span-2">
 
-                        <div class="h-full rounded-3xl border border-slate-200 bg-white p-7 sm:p-8 shadow-sm">
+                        <div class="h-full
+                            rounded-2xl
+                            sm:rounded-3xl
+                            border border-slate-200
+                            bg-white
+                            p-5
+                            sm:p-7
+                            lg:p-8
+                            shadow-sm">
+
+
+                            <!-- Heading -->
 
                             <div>
 
-                                <span
-                                    class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#00B4DB]/10 text-[#00B4DB]">
-                                    <i class="fa-solid fa-headset text-xl"></i>
+                                <span class="inline-flex
+                                    h-11 w-11
+                                    sm:h-12 sm:w-12
+                                    items-center
+                                    justify-center
+                                    rounded-2xl
+                                    bg-[#00B4DB]/10
+                                    text-[#00B4DB]">
+
+                                    <i class="fa-solid fa-headset
+                                        text-lg sm:text-xl">
+                                    </i>
+
                                 </span>
 
-                                <h2 class="mt-5 text-2xl font-extrabold text-black">
+
+                                <h2 class="mt-5
+                                    text-xl
+                                    sm:text-2xl
+                                    font-extrabold
+                                    text-black">
+
                                     Contact Information
+
                                 </h2>
 
-                                <p class="mt-3 text-sm leading-6 text-slate-500">
+
+                                <p class="mt-3
+                                    text-sm
+                                    leading-6
+                                    text-slate-500">
+
                                     You can contact the PNC Student Club
                                     Secretariat using the information below.
+
                                 </p>
 
                             </div>
 
 
-                            <!-- Address -->
+                            <!-- ADDRESS -->
 
-                            <div class="mt-8 flex gap-4">
+                            <div class="mt-7
+                                sm:mt-8
+                                flex
+                                items-start
+                                gap-3
+                                sm:gap-4">
 
-                                <div
-                                    class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#00B4DB]/10 text-[#00B4DB]">
+                                <div class="flex
+                                    h-10 w-10
+                                    sm:h-11 sm:w-11
+                                    shrink-0
+                                    items-center
+                                    justify-center
+                                    rounded-xl
+                                    bg-[#00B4DB]/10
+                                    text-[#00B4DB]">
+
                                     <i class="fa-solid fa-location-dot"></i>
+
                                 </div>
 
-                                <div>
 
-                                    <h3 class="font-bold text-slate-800">
+                                <div class="min-w-0">
+
+                                    <h3 class="font-bold
+                                        text-slate-800">
+
                                         Address
+
                                     </h3>
 
-                                    <p class="mt-1 text-sm leading-6 text-slate-500">
+                                    <p class="mt-1
+                                        text-sm
+                                        leading-6
+                                        text-slate-500">
+
                                         BP 511, Phum Trea 4,
                                         Sangkat Stung Meanchey,
                                         Khan Sen Sok,
                                         Phnom Penh, Cambodia.
+
                                     </p>
 
                                 </div>
@@ -326,24 +464,49 @@
                             </div>
 
 
-                            <!-- Email -->
+                            <!-- EMAIL -->
 
-                            <div class="mt-6 flex gap-4">
+                            <div class="mt-6
+                                flex
+                                items-start
+                                gap-3
+                                sm:gap-4">
 
-                                <div
-                                    class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#00B4DB]/10 text-[#00B4DB]">
+                                <div class="flex
+                                    h-10 w-10
+                                    sm:h-11 sm:w-11
+                                    shrink-0
+                                    items-center
+                                    justify-center
+                                    rounded-xl
+                                    bg-[#00B4DB]/10
+                                    text-[#00B4DB]">
+
                                     <i class="fa-solid fa-envelope"></i>
+
                                 </div>
 
-                                <div>
 
-                                    <h3 class="font-bold text-slate-800">
+                                <div class="min-w-0">
+
+                                    <h3 class="font-bold
+                                        text-slate-800">
+
                                         Email
+
                                     </h3>
 
-                                    <a href="mailto:info.cambodia@passerellesnumeriques.org"
-                                        class="mt-1 block text-sm text-slate-500 transition hover:text-[#FE5900]">
+
+                                    <a href="mailto:info.cambodia@passerellesnumeriques.org" class="mt-1
+                                        block
+                                        break-words
+                                        text-sm
+                                        text-slate-500
+                                        transition
+                                        hover:text-[#FE5900]">
+
                                         info.cambodia@passerellesnumeriques.org
+
                                     </a>
 
                                 </div>
@@ -351,25 +514,47 @@
                             </div>
 
 
-                            <!-- Phone -->
+                            <!-- PHONE -->
 
-                            <div class="mt-6 flex gap-4">
+                            <div class="mt-6
+                                flex
+                                items-start
+                                gap-3
+                                sm:gap-4">
 
-                                <div
-                                    class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#00B4DB]/10 text-[#00B4DB]">
+                                <div class="flex
+                                    h-10 w-10
+                                    sm:h-11 sm:w-11
+                                    shrink-0
+                                    items-center
+                                    justify-center
+                                    rounded-xl
+                                    bg-[#00B4DB]/10
+                                    text-[#00B4DB]">
+
                                     <i class="fa-solid fa-phone"></i>
+
                                 </div>
+
 
                                 <div>
 
-                                    <h3 class="font-bold text-slate-800">
+                                    <h3 class="font-bold
+                                        text-slate-800">
+
                                         Phone
+
                                     </h3>
 
-                                    <p class="mt-1 text-sm leading-6 text-slate-500">
+                                    <p class="mt-1
+                                        text-sm
+                                        leading-6
+                                        text-slate-500">
+
                                         +855 23 997 224
                                         <br>
                                         +855 12 345 678
+
                                     </p>
 
                                 </div>
@@ -377,37 +562,118 @@
                             </div>
 
 
-                            <!-- Social Media -->
+                            <!-- SOCIAL MEDIA -->
 
-                            <div class="mt-8 border-t border-slate-200 pt-7">
+                            <div class="mt-7
+                                sm:mt-8
+                                border-t
+                                border-slate-200
+                                pt-6
+                                sm:pt-7">
 
-                                <h3 class="text-sm font-extrabold uppercase tracking-wide text-slate-700">
+                                <h3 class="text-xs
+                                    sm:text-sm
+                                    font-extrabold
+                                    uppercase
+                                    tracking-wide
+                                    text-slate-700">
+
                                     Follow Us
+
                                 </h3>
 
-                                <div class="mt-4 flex gap-3">
 
-                                    <a href="#" aria-label="Facebook"
-                                        class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#00B4DB]/10 text-[#00B4DB] transition-all duration-300 hover:-translate-y-1 hover:bg-[#FE5900] hover:text-white">
+                                <div class="mt-4
+                                    flex
+                                    flex-wrap
+                                    gap-2
+                                    sm:gap-3">
+
+
+                                    <!-- Facebook -->
+
+                                    <a href="#" aria-label="Facebook" class="flex
+                                        h-10 w-10
+                                        sm:h-11 sm:w-11
+                                        items-center
+                                        justify-center
+                                        rounded-xl
+                                        bg-[#00B4DB]/10
+                                        text-[#00B4DB]
+                                        transition-all
+                                        duration-300
+                                        hover:-translate-y-1
+                                        hover:bg-[#FE5900]
+                                        hover:text-white">
+
                                         <i class="fa-brands fa-facebook-f"></i>
+
                                     </a>
+
+
+                                    <!-- Telegram -->
 
                                     <a href="https://t.me/pncambodia" target="_blank" rel="noopener noreferrer"
-                                        aria-label="Telegram"
-                                        class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#00B4DB]/10 text-[#00B4DB] transition-all duration-300 hover:-translate-y-1 hover:bg-[#FE5900] hover:text-white">
+                                        aria-label="Telegram" class="flex
+                                        h-10 w-10
+                                        sm:h-11 sm:w-11
+                                        items-center
+                                        justify-center
+                                        rounded-xl
+                                        bg-[#00B4DB]/10
+                                        text-[#00B4DB]
+                                        transition-all
+                                        duration-300
+                                        hover:-translate-y-1
+                                        hover:bg-[#FE5900]
+                                        hover:text-white">
+
                                         <i class="fa-brands fa-telegram"></i>
+
                                     </a>
+
+
+                                    <!-- Instagram -->
 
                                     <a href="https://www.instagram.com/passerellesnumeriques/" target="_blank"
-                                        rel="noopener noreferrer" aria-label="Instagram"
-                                        class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#00B4DB]/10 text-[#00B4DB] transition-all duration-300 hover:-translate-y-1 hover:bg-[#FE5900] hover:text-white">
+                                        rel="noopener noreferrer" aria-label="Instagram" class="flex
+                                        h-10 w-10
+                                        sm:h-11 sm:w-11
+                                        items-center
+                                        justify-center
+                                        rounded-xl
+                                        bg-[#00B4DB]/10
+                                        text-[#00B4DB]
+                                        transition-all
+                                        duration-300
+                                        hover:-translate-y-1
+                                        hover:bg-[#FE5900]
+                                        hover:text-white">
+
                                         <i class="fa-brands fa-instagram"></i>
+
                                     </a>
 
+
+                                    <!-- LinkedIn -->
+
                                     <a href="https://www.linkedin.com/company/passerellesnum-riques/" target="_blank"
-                                        rel="noopener noreferrer" aria-label="LinkedIn"
-                                        class="flex h-11 w-11 items-center justify-center rounded-xl bg-[#00B4DB]/10 text-[#00B4DB] transition-all duration-300 hover:-translate-y-1 hover:bg-[#FE5900] hover:text-white">
+                                        rel="noopener noreferrer" aria-label="LinkedIn" class="flex
+                                        h-10 w-10
+                                        sm:h-11 sm:w-11
+                                        items-center
+                                        justify-center
+                                        rounded-xl
+                                        bg-[#00B4DB]/10
+                                        text-[#00B4DB]
+                                        transition-all
+                                        duration-300
+                                        hover:-translate-y-1
+                                        hover:bg-[#FE5900]
+                                        hover:text-white">
+
                                         <i class="fa-brands fa-linkedin-in"></i>
+
                                     </a>
 
                                 </div>
@@ -419,69 +685,170 @@
                     </div>
 
 
-                    <!-- ================= CONTACT FORM ================= -->
+                    <!-- =================================================
+                         CONTACT FORM
+                         ================================================= -->
 
                     <div class="lg:col-span-3">
 
-                        <div class="rounded-3xl border border-slate-200 bg-white p-7 sm:p-9 shadow-sm">
+                        <div class="rounded-2xl
+                            sm:rounded-3xl
+                            border border-slate-200
+                            bg-white
+                            p-5
+                            sm:p-7
+                            lg:p-9
+                            shadow-sm">
+
 
                             <div>
 
-                                <h2 class="text-2xl font-extrabold text-black">
+                                <h2 class="text-xl
+                                    sm:text-2xl
+                                    font-extrabold
+                                    text-black">
+
                                     Send Us a Message
+
                                 </h2>
 
-                                <p class="mt-2 text-sm leading-6 text-slate-500">
+
+                                <p class="mt-2
+                                    text-sm
+                                    leading-6
+                                    text-slate-500">
+
                                     Choose a club leader and send your
                                     question directly to the selected club.
+
                                 </p>
 
                             </div>
 
 
-                            <form id="contact-form" class="mt-8 space-y-6">
+                            <!-- FORM -->
 
-                                <!-- Name + Email -->
+                            <form id="contact-form" class="mt-7
+                                sm:mt-8
+                                space-y-5
+                                sm:space-y-6">
 
-                                <div class="grid gap-6 sm:grid-cols-2">
+
+                                <!-- NAME + EMAIL -->
+
+                                <div class="grid
+                                    gap-5
+                                    sm:gap-6
+                                    sm:grid-cols-2">
+
+
+                                    <!-- NAME -->
 
                                     <div>
 
-                                        <label for="name" class="mb-2 block text-sm font-bold text-slate-700">
+                                        <label for="name" class="mb-2 block
+                                            text-sm
+                                            font-bold
+                                            text-slate-700">
+
                                             Your Name
+
                                         </label>
 
+
                                         <input id="name" name="name" type="text" required placeholder="Enter your name"
-                                            class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-[#00B4DB] focus:bg-white focus:ring-4 focus:ring-[#00B4DB]/10">
+                                            class="w-full
+                                            min-w-0
+                                            rounded-xl
+                                            border border-slate-200
+                                            bg-slate-50
+                                            px-4
+                                            py-3
+                                            sm:py-3.5
+                                            text-sm
+                                            sm:text-base
+                                            text-slate-800
+                                            outline-none
+                                            transition
+                                            placeholder:text-slate-400
+                                            focus:border-[#00B4DB]
+                                            focus:bg-white
+                                            focus:ring-4
+                                            focus:ring-[#00B4DB]/10">
 
                                     </div>
 
 
+                                    <!-- EMAIL -->
+
                                     <div>
 
-                                        <label for="email" class="mb-2 block text-sm font-bold text-slate-700">
+                                        <label for="email" class="mb-2 block
+                                            text-sm
+                                            font-bold
+                                            text-slate-700">
+
                                             Your Email
+
                                         </label>
 
+
                                         <input id="email" name="email" type="email" required
-                                            placeholder="example@email.com"
-                                            class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-[#00B4DB] focus:bg-white focus:ring-4 focus:ring-[#00B4DB]/10">
+                                            placeholder="example@email.com" class="w-full
+                                            min-w-0
+                                            rounded-xl
+                                            border border-slate-200
+                                            bg-slate-50
+                                            px-4
+                                            py-3
+                                            sm:py-3.5
+                                            text-sm
+                                            sm:text-base
+                                            text-slate-800
+                                            outline-none
+                                            transition
+                                            placeholder:text-slate-400
+                                            focus:border-[#00B4DB]
+                                            focus:bg-white
+                                            focus:ring-4
+                                            focus:ring-[#00B4DB]/10">
 
                                     </div>
 
                                 </div>
 
 
-                                <!-- Club Leader -->
+                                <!-- CLUB LEADER -->
 
                                 <div>
 
-                                    <label for="club-leader" class="mb-2 block text-sm font-bold text-slate-700">
+                                    <label for="club-leader" class="mb-2 block
+                                        text-sm
+                                        font-bold
+                                        text-slate-700">
+
                                         Select Club Leader Email
+
                                     </label>
 
-                                    <select id="club-leader" name="to_email" required
-                                        class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm text-slate-800 outline-none transition focus:border-[#00B4DB] focus:bg-white focus:ring-4 focus:ring-[#00B4DB]/10">
+
+                                    <select id="club-leader" name="to_email" required class="w-full
+                                        min-w-0
+                                        rounded-xl
+                                        border border-slate-200
+                                        bg-slate-50
+                                        px-4
+                                        py-3
+                                        sm:py-3.5
+                                        text-sm
+                                        sm:text-base
+                                        text-slate-800
+                                        outline-none
+                                        transition
+                                        focus:border-[#00B4DB]
+                                        focus:bg-white
+                                        focus:ring-4
+                                        focus:ring-[#00B4DB]/10">
 
                                         <option value="">
                                             Select a club leader
@@ -572,47 +939,119 @@
                                 </div>
 
 
-                                <!-- Subject -->
+                                <!-- SUBJECT -->
 
                                 <div>
 
-                                    <label for="subject" class="mb-2 block text-sm font-bold text-slate-700">
+                                    <label for="subject" class="mb-2 block
+                                        text-sm
+                                        font-bold
+                                        text-slate-700">
+
                                         Subject
+
                                     </label>
+
 
                                     <input id="subject" name="subject" type="text" required
-                                        placeholder="What would you like to ask?"
-                                        class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-[#00B4DB] focus:bg-white focus:ring-4 focus:ring-[#00B4DB]/10">
+                                        placeholder="What would you like to ask?" class="w-full
+                                        min-w-0
+                                        rounded-xl
+                                        border border-slate-200
+                                        bg-slate-50
+                                        px-4
+                                        py-3
+                                        sm:py-3.5
+                                        text-sm
+                                        sm:text-base
+                                        text-slate-800
+                                        outline-none
+                                        transition
+                                        placeholder:text-slate-400
+                                        focus:border-[#00B4DB]
+                                        focus:bg-white
+                                        focus:ring-4
+                                        focus:ring-[#00B4DB]/10">
 
                                 </div>
 
 
-                                <!-- Message -->
+                                <!-- MESSAGE -->
 
                                 <div>
 
-                                    <label for="message" class="mb-2 block text-sm font-bold text-slate-700">
+                                    <label for="message" class="mb-2 block
+                                        text-sm
+                                        font-bold
+                                        text-slate-700">
+
                                         Message
+
                                     </label>
 
+
                                     <textarea id="message" name="message" rows="6" required
-                                        placeholder="Write your message here..."
-                                        class="w-full resize-none rounded-xl border border-slate-200 bg-slate-50 px-4 py-3.5 text-sm leading-6 text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-[#00B4DB] focus:bg-white focus:ring-4 focus:ring-[#00B4DB]/10"></textarea>
+                                        placeholder="Write your message here..." class="w-full
+                                        min-w-0
+                                        resize-none
+                                        rounded-xl
+                                        border border-slate-200
+                                        bg-slate-50
+                                        px-4
+                                        py-3
+                                        sm:py-3.5
+                                        text-sm
+                                        sm:text-base
+                                        leading-6
+                                        text-slate-800
+                                        outline-none
+                                        transition
+                                        placeholder:text-slate-400
+                                        focus:border-[#00B4DB]
+                                        focus:bg-white
+                                        focus:ring-4
+                                        focus:ring-[#00B4DB]/10">
+                                    </textarea>
 
                                 </div>
 
 
-                                <!-- Status -->
+                                <!-- STATUS -->
 
-                                <div id="form-status" class="hidden rounded-xl px-4 py-3 text-sm font-semibold"
-                                    role="alert">
+                                <div id="form-status" class="hidden
+                                    rounded-xl
+                                    border
+                                    px-4 py-3
+                                    text-sm
+                                    font-semibold" role="alert">
                                 </div>
 
 
-                                <!-- Submit -->
+                                <!-- SUBMIT -->
 
-                                <button id="submit-button" type="submit"
-                                    class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#FE5900] px-6 py-3.5 text-sm font-extrabold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#FE5900] hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-60">
+                                <button id="submit-button" type="submit" class="inline-flex
+                                    w-full
+                                    min-h-[48px]
+                                    sm:min-h-[52px]
+                                    items-center
+                                    justify-center
+                                    gap-2
+                                    rounded-xl
+                                    bg-[#FE5900]
+                                    px-5 sm:px-6
+                                    py-3
+                                    sm:py-3.5
+                                    text-sm
+                                    sm:text-base
+                                    font-extrabold
+                                    text-white
+                                    shadow-sm
+                                    transition-all
+                                    duration-300
+                                    hover:-translate-y-0.5
+                                    hover:shadow-lg
+                                    disabled:cursor-not-allowed
+                                    disabled:opacity-60">
 
                                     <i class="fa-solid fa-paper-plane"></i>
 
@@ -635,34 +1074,83 @@
         </section>
 
 
-        <!-- ================= MAP ================= -->
+        <!-- =====================================================
+             MAP
+             ===================================================== -->
 
-        <section class="pb-16 lg:pb-20">
+        <section class="pb-10
+            sm:pb-14
+            lg:pb-20">
 
-            <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto
+                px-4 sm:px-6 lg:px-8">
 
-                <div class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+                <div class="overflow-hidden
+                    rounded-2xl
+                    sm:rounded-3xl
+                    border border-slate-200
+                    bg-white
+                    shadow-sm">
 
-                    <div class="p-7 sm:p-8">
 
-                        <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                    <!-- Map Header -->
+
+                    <div class="p-5
+                        sm:p-7
+                        lg:p-8">
+
+                        <div class="flex
+                            flex-col
+                            gap-4
+                            sm:flex-row
+                            sm:items-center
+                            sm:justify-between">
+
 
                             <div>
 
-                                <span class="text-sm font-extrabold uppercase tracking-wide text-[#FE5900]">
+                                <span class="text-xs
+                                    sm:text-sm
+                                    font-extrabold
+                                    uppercase
+                                    tracking-wide
+                                    text-[#FE5900]">
+
                                     Find Us
+
                                 </span>
 
-                                <h2 class="mt-2 text-2xl font-extrabold text-black">
+
+                                <h2 class="mt-2
+                                    text-xl
+                                    sm:text-2xl
+                                    font-extrabold
+                                    text-black">
+
                                     PNC Cambodia Location
+
                                 </h2>
 
                             </div>
 
 
+                            <!-- Google Maps -->
+
                             <a href="https://www.google.com/maps/search/?api=1&query=Passerelles+Num%C3%A9riques+Cambodia"
-                                target="_blank" rel="noopener noreferrer"
-                                class="inline-flex items-center justify-center gap-2 rounded-xl bg-[#00B4DB] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#FE5900]">
+                                target="_blank" rel="noopener noreferrer" class="inline-flex
+                                w-full
+                                sm:w-auto
+                                items-center
+                                justify-center
+                                gap-2
+                                rounded-xl
+                                bg-[#00B4DB]
+                                px-5 py-3
+                                text-sm
+                                font-bold
+                                text-white
+                                transition
+                                hover:bg-[#FE5900]">
 
                                 Open in Google Maps
 
@@ -675,11 +1163,19 @@
                     </div>
 
 
-                    <div class="h-[380px] w-full">
+                    <!-- Map -->
+
+                    <div class="h-[260px]
+                        sm:h-[320px]
+                        md:h-[350px]
+                        lg:h-[380px]
+                        w-full">
 
                         <iframe title="PNC Cambodia Map"
                             src="https://www.openstreetmap.org/export/embed.html?bbox=104.8800%2C11.5300%2C104.9200%2C11.5600&layer=mapnik"
-                            class="h-full w-full border-0" loading="lazy">
+                            class="h-full
+                            w-full
+                            border-0" loading="lazy">
                         </iframe>
 
                     </div>
@@ -692,54 +1188,111 @@
 
     </main>
 
-    <!-- ================= FOOTER ================= -->
-    <footer class="mt-20 bg-[#050A35] text-white">
 
-        <div class="mx-auto max-w-7xl px-5 py-12 sm:px-6 lg:px-8">
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
 
-            <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <footer class="mt-12
+        sm:mt-16
+        lg:mt-20
+        bg-[#050A35]
+        text-white">
+
+        <div class="mx-auto
+            max-w-7xl
+            px-4
+            sm:px-6
+            lg:px-8
+            py-10
+            sm:py-12">
+
+
+            <!-- Footer Grid -->
+
+            <div class="grid
+                grid-cols-1
+                sm:grid-cols-2
+                lg:grid-cols-4
+                gap-8
+                sm:gap-10">
+
+
+                <!-- PNC STUDENT CLUBS -->
 
                 <div>
 
-                    <h3 class="text-sm font-extrabold text-[#00B0DF]">
+                    <h3 class="text-sm
+                        font-extrabold
+                        text-[#00B0DF]">
+
                         PNC STUDENT CLUBS
+
                     </h3>
 
-                    <p class="mt-4 text-xs leading-5 text-slate-400">
+
+                    <p class="mt-4
+                        text-xs
+                        leading-5
+                        text-slate-400">
+
                         A student club portal designed to help PNC
                         students discover activities, connect with
                         communities, and develop skills beyond the
                         classroom.
+
                     </p>
 
                 </div>
 
 
+                <!-- QUICK LINKS -->
+
                 <div>
 
-                    <h3 class="text-sm font-extrabold text-orange-400">
+                    <h3 class="text-sm
+                        font-extrabold
+                        text-orange-400">
+
                         Quick Links
+
                     </h3>
+
 
                     <div class="mt-4 space-y-2">
 
-                        <a href="../index.html" class="block text-xs text-slate-400 transition hover:text-white">
+                        <a href="../index.html" class="block text-xs
+                            text-slate-400
+                            transition
+                            hover:text-white">
                             Home
                         </a>
 
-                        <a href="./club.html" class="block text-xs text-slate-400 transition hover:text-white">
+                        <a href="./club.html" class="block text-xs
+                            text-slate-400
+                            transition
+                            hover:text-white">
                             Student Clubs
                         </a>
 
-                        <a href="./stories.html" class="block text-xs text-slate-400 transition hover:text-white">
+                        <a href="./stories.html" class="block text-xs
+                            text-slate-400
+                            transition
+                            hover:text-white">
                             Stories
                         </a>
 
-                        <a href="./join.html" class="block text-xs text-slate-400 transition hover:text-white">
+                        <a href="./join.html" class="block text-xs
+                            text-slate-400
+                            transition
+                            hover:text-white">
                             Join a Club
                         </a>
 
-                        <a href="./contact.html" class="block text-xs text-slate-400 transition hover:text-white">
+                        <a href="./contact.html" class="block text-xs
+                            text-slate-400
+                            transition
+                            hover:text-white">
                             Contact
                         </a>
 
@@ -748,13 +1301,23 @@
                 </div>
 
 
+                <!-- CATEGORIES -->
+
                 <div>
 
-                    <h3 class="text-sm font-extrabold text-orange-400">
+                    <h3 class="text-sm
+                        font-extrabold
+                        text-orange-400">
+
                         Categories
+
                     </h3>
 
-                    <div class="mt-4 space-y-2 text-xs text-slate-400">
+
+                    <div class="mt-4
+                        space-y-2
+                        text-xs
+                        text-slate-400">
 
                         <a href="./club.html?category=Technology" class="block transition hover:text-white">
                             Technology
@@ -781,23 +1344,45 @@
                 </div>
 
 
+                <!-- PASSERELLES NUMÉRIQUES -->
+
                 <div>
 
-                    <h3 class="text-sm font-extrabold text-orange-400">
+                    <h3 class="text-sm
+                        font-extrabold
+                        text-orange-400">
+
                         Passerelles Numériques
+
                     </h3>
 
-                    <p class="mt-4 text-xs leading-5 text-slate-400">
+
+                    <p class="mt-4
+                        text-xs
+                        leading-5
+                        text-slate-400">
+
                         Building brighter futures through digital
                         education and student development.
+
                     </p>
 
-                    <a href="https://www.passerellesnumeriques.org/" target="_blank" rel="noopener noreferrer"
-                        class="mt-4 inline-flex items-center text-xs font-semibold text-[#00B0DF] transition hover:text-white">
+
+                    <a href="https://www.passerellesnumeriques.org/" target="_blank" rel="noopener noreferrer" class="mt-4
+                        inline-flex
+                        items-center
+                        text-xs
+                        font-semibold
+                        text-[#00B0DF]
+                        transition
+                        hover:text-white">
 
                         Visit PNC
 
-                        <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+                        <i class="fa-solid
+                            fa-arrow-up-right-from-square
+                            ml-2">
+                        </i>
 
                     </a>
 
@@ -806,11 +1391,21 @@
             </div>
 
 
-            <div class="mt-10 border-t border-white/10 pt-6 text-center">
+            <!-- COPYRIGHT -->
 
-                <p class="text-xs text-slate-500">
+            <div class="mt-8
+                sm:mt-10
+                border-t
+                border-white/10
+                pt-6
+                text-center">
+
+                <p class="text-xs
+                    text-slate-500">
+
                     © 2026 Passerelles Numériques Cambodia (PNC).
                     All rights reserved.
+
                 </p>
 
             </div>
@@ -820,55 +1415,89 @@
     </footer>
 
 
-    <!-- ================= JAVASCRIPT ================= -->
+    <!-- =========================================================
+         JAVASCRIPT
+         ========================================================= -->
+
     <script>
 
-        /* ================= MOBILE MENU ================= */
 
-        const menuButton = document.getElementById("menu-button");
-        const mobileMenu = document.getElementById("mobile-menu");
-        const menuIcon = document.getElementById("menu-icon");
+        /* =========================================================
+           MOBILE MENU
+           ========================================================= */
+
+        const menuButton =
+            document.getElementById("menu-button");
+
+        const mobileMenu =
+            document.getElementById("mobile-menu");
+
+        const menuIcon =
+            document.getElementById("menu-icon");
+
 
         if (menuButton && mobileMenu && menuIcon) {
+
             menuButton.addEventListener("click", () => {
 
                 const isOpen =
                     !mobileMenu.classList.contains("hidden");
 
+
                 mobileMenu.classList.toggle("hidden");
+
 
                 menuButton.setAttribute(
                     "aria-expanded",
                     String(!isOpen)
                 );
 
+
                 if (isOpen) {
+
                     menuIcon.classList.remove("fa-xmark");
+
                     menuIcon.classList.add("fa-bars");
+
                 } else {
+
                     menuIcon.classList.remove("fa-bars");
+
                     menuIcon.classList.add("fa-xmark");
+
                 }
 
             });
+
         }
 
 
-        /* ================= EMAILJS CONFIGURATION ================= */
+        /* =========================================================
+           EMAILJS CONFIGURATION
+           ========================================================= */
 
-        const EMAILJS_PUBLIC_KEY = "WRdjPeJt7iSWTGQ6U";
-        const EMAILJS_SERVICE_ID = "service_nx4wtop";
-        const EMAILJS_TEMPLATE_ID = "template_th20l1m";
+        const EMAILJS_PUBLIC_KEY =
+            "WRdjPeJt7iSWTGQ6U";
+
+        const EMAILJS_SERVICE_ID =
+            "service_nx4wtop";
+
+        const EMAILJS_TEMPLATE_ID =
+            "template_th20l1m";
 
 
-        /* ================= INITIALIZE EMAILJS ================= */
+        /* =========================================================
+           INITIALIZE EMAILJS
+           ========================================================= */
 
         emailjs.init({
             publicKey: EMAILJS_PUBLIC_KEY
         });
 
 
-        /* ================= FORM ELEMENTS ================= */
+        /* =========================================================
+           FORM ELEMENTS
+           ========================================================= */
 
         const contactForm =
             document.getElementById("contact-form");
@@ -883,155 +1512,170 @@
             document.getElementById("form-status");
 
 
-        /* ================= FORM SUBMIT ================= */
+        /* =========================================================
+           FORM SUBMIT
+           ========================================================= */
 
         if (contactForm) {
 
-            contactForm.addEventListener("submit", async function (event) {
+            contactForm.addEventListener(
+                "submit",
+                async function (event) {
 
-                event.preventDefault();
-
-                const leaderSelect =
-                    document.getElementById("club-leader");
-
-                const selectedLeader =
-                    leaderSelect.value;
+                    event.preventDefault();
 
 
-                /* Check club leader */
-
-                if (!selectedLeader) {
-
-                    showFormStatus(
-                        "Please select a club leader.",
-                        "error"
-                    );
-
-                    return;
-                }
+                    const leaderSelect =
+                        document.getElementById("club-leader");
 
 
-                /* Disable button */
-
-                submitButton.disabled = true;
-                submitText.textContent = "Sending...";
-                formStatus.classList.add("hidden");
+                    const selectedLeader =
+                        leaderSelect.value;
 
 
-                try {
+                    /* Check club leader */
 
-                    /* Get form data */
+                    if (!selectedLeader) {
 
-                    const formData =
-                        new FormData(contactForm);
+                        showFormStatus(
+                            "Please select a club leader.",
+                            "error"
+                        );
 
-
-                    /* EmailJS parameters */
-
-                    const templateParams = {
-
-                        name:
-                            formData.get("name"),
-
-                        email:
-                            formData.get("email"),
-
-                        to_email:
-                            selectedLeader,
-
-                        subject:
-                            formData.get("subject"),
-
-                        message:
-                            formData.get("message")
-
-                    };
-
-
-                    console.log(
-                        "Sending email to:",
-                        templateParams.to_email
-                    );
-
-
-                    /* Send email */
-
-                    await emailjs.send(
-                        EMAILJS_SERVICE_ID,
-                        EMAILJS_TEMPLATE_ID,
-                        templateParams
-                    );
-
-
-                    /* Success */
-
-                    showFormStatus(
-                        "Your message has been sent successfully to the selected club leader.",
-                        "success"
-                    );
-
-
-                    contactForm.reset();
-
-                    submitText.textContent =
-                        "Message Sent";
-
-
-                    setTimeout(() => {
-
-                        submitText.textContent =
-                            "Send Message";
-
-                    }, 3000);
-
-
-                } catch (error) {
-
-                    console.error(
-                        "EmailJS Error:",
-                        error
-                    );
-
-
-                    let errorMessage =
-                        "Sorry, your message could not be sent.";
-
-
-                    if (error && error.text) {
-
-                        errorMessage +=
-                            " " + error.text;
+                        return;
 
                     }
 
 
-                    showFormStatus(
-                        errorMessage,
-                        "error"
-                    );
+                    /* Disable button */
 
+                    submitButton.disabled = true;
 
                     submitText.textContent =
-                        "Send Message";
+                        "Sending...";
+
+                    formStatus.classList.add("hidden");
 
 
-                } finally {
+                    try {
 
-                    submitButton.disabled =
-                        false;
+                        /* Get form data */
+
+                        const formData =
+                            new FormData(contactForm);
+
+
+                        /* EmailJS parameters */
+
+                        const templateParams = {
+
+                            name:
+                                formData.get("name"),
+
+                            email:
+                                formData.get("email"),
+
+                            to_email:
+                                selectedLeader,
+
+                            subject:
+                                formData.get("subject"),
+
+                            message:
+                                formData.get("message")
+
+                        };
+
+
+                        console.log(
+                            "Sending email to:",
+                            templateParams.to_email
+                        );
+
+
+                        /* Send email */
+
+                        await emailjs.send(
+                            EMAILJS_SERVICE_ID,
+                            EMAILJS_TEMPLATE_ID,
+                            templateParams
+                        );
+
+
+                        /* Success */
+
+                        showFormStatus(
+                            "Your message has been sent successfully to the selected club leader.",
+                            "success"
+                        );
+
+
+                        contactForm.reset();
+
+
+                        submitText.textContent =
+                            "Message Sent";
+
+
+                        setTimeout(() => {
+
+                            submitText.textContent =
+                                "Send Message";
+
+                        }, 3000);
+
+
+                    } catch (error) {
+
+                        console.error(
+                            "EmailJS Error:",
+                            error
+                        );
+
+
+                        let errorMessage =
+                            "Sorry, your message could not be sent.";
+
+
+                        if (error && error.text) {
+
+                            errorMessage +=
+                                " " + error.text;
+
+                        }
+
+
+                        showFormStatus(
+                            errorMessage,
+                            "error"
+                        );
+
+
+                        submitText.textContent =
+                            "Send Message";
+
+                    } finally {
+
+                        submitButton.disabled =
+                            false;
+
+                    }
 
                 }
-
-            });
+            );
 
         }
 
 
-        /* ================= FORM STATUS ================= */
+        /* =========================================================
+           FORM STATUS
+           ========================================================= */
 
         function showFormStatus(message, type) {
 
-            formStatus.textContent = message;
+            formStatus.textContent =
+                message;
+
 
             formStatus.classList.remove(
                 "hidden",
